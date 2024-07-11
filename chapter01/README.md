@@ -391,6 +391,63 @@ const 변수명 = 값;
     console.log(index)
 </script>
 ````
+
+## typeof
+변수의 타입을 반환하는 자바스크립트 키워드
+
+## 타입
++ 자바스크립트에는 타입(Type)이라는 개념이 있다.
++ 타입이란 변수에 할당할 수 있는 데이터 형태를 말한다. ex)숫자, 문자
++ 즉, 변수에는 숫자나 문자 등 다양한 형태의 데이터 타입을 담을 수 있다.
++ 데이터 타입에 따라 할 수 있는 일이 다르다.
++ 즉, 타입마다 다른 속성과 메서드가 있다.
+
+## 자바스크립트의 데이터 타입
+1. 원시 타입 (Primitive Type)
+2. 참조타입(Object/Reference Type)
+
+## 원시 타입 (Primitive Type)
++ Number
++ String
++ Boolean
++ Undefined
++ Null
++ Symbol(ES6에 추가, 객체 속성을 만드는 데이터 타입)
+
+## 참조타입(Object/Reference Type)
++ 객체(Object)
++ 배열(Array)
++ 함수(Fuction)
+
+## Undefined 자료형
++ 자바스크립트에서 undefined는 의도치 않게 누락된 값을 나타내기 위해서 주로 사용된다. 
++ 보통 개발자가 값을 설정하지 않았을 때 프로그래밍 언어 차원에서 자연스럽게 알아서 설정되는 경우가 많습니다.
++ 값도 타입도 undefined
+
+````
+<script>
+    console.log(typeof 1); // number
+    console.log(typeof "abc"); // string
+    console.log(typeof true); // boolean
+    console.log(typeof false); // boolean
+    console.log(typeof { a: 1, b: 2 }); // object
+
+    function add(x, y) {
+        return x + y;
+    }
+    console.log(typeof add); // function
+
+    let score = "68"
+    let sum = score + 20
+    console.log(score)
+    console.log(typeof score) //string
+    console.log(sum)
+
+    const msg = "안녕하세요";
+    console.log(msg)
+</script>
+````
+
 ## 블록 스코프와 let, const
 + 블록 스코프는 블록 {} 내부에서 선언된 변수는 해당 블록에서만 접근 가능한 걸 말한다.
 + let, const로 선언된 변수가 블록 스코프 방식을 따른다.
@@ -453,23 +510,6 @@ const 변수명 = 값;
     console.log(menuName, price)
 </script>
 ````
-
-## typeof
-변수의 타입을 반환하는 자바스크립트 키워드
-
-````
-<script>
-    let score = "68"
-    let sum = score + 20
-    console.log(score)
-    console.log(typeof score) //string
-    console.log(sum)
-
-    const msg = "안녕하세요";
-    console.log(msg)
-</script>
-````
-
 
 ## TDZ(Temporal Dead Zone)의 정의
 + TDZ 는 스코프의 시작 지점부터 초기화 시작 지점까지의 사각지대 구간을 뜻한다.(변수가 선언되고 초기화되기 사이의 사각지대)

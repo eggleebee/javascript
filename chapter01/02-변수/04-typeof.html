@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
+        console.log(typeof 1); // number
+        console.log(typeof "abc"); // string
+        console.log(typeof true); // boolean
+        console.log(typeof false); // boolean
+        console.log(typeof { a: 1, b: 2 }); // object
+
+        function add(x, y) {
+            return x + y;
+        }
+        console.log(typeof add); // function
+
         let score = "68"
         let sum = score + 20
         console.log(score)
@@ -16,9 +29,7 @@
 
         const msg = "안녕하세요";
         console.log(msg)
-
-        console.log(num); //Uncaught ReferenceError: Cannot access 'num' before initialization
-        let num; //num을 초기화 하지 않을 경우 접근 안됨(일시적 사각지대로 들어감)
     </script>
 </body>
+
 </html>

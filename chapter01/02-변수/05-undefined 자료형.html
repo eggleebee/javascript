@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 변수를 선언할 때 초기화를 하지 않으면 undefined가 할당
+        let x;
+        console.log(x); // undefined
+        console.log(typeof x); // 'undefined'
+
+        // 함수를 호출할 때도 매개 변수를 넘기지 않으면 undefined가 할당
+        function foo(x, y) {
+            return { x, y };
+        }
+
+        foo(1); // { x: 1, y: undefined }
+    </script>
+</body>
+
+</html>
