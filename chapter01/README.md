@@ -454,6 +454,36 @@ const 변수명 = 값;
 </script>
 ````
 
+## typeof
+변수의 타입을 반환하는 자바스크립트 키워드
+
+````
+<script>
+    let score = "68"
+    let sum = score + 20
+    console.log(score)
+    console.log(typeof score) //string
+    console.log(sum)
+
+    const msg = "안녕하세요";
+    console.log(msg)
+</script>
+````
+
+
+## TDZ(Temporal Dead Zone)의 정의
++ TDZ 는 스코프의 시작 지점부터 초기화 시작 지점까지의 사각지대 구간을 뜻한다.(변수가 선언되고 초기화되기 사이의 사각지대)
++ let과 const는 var와는 다르게 선언단계와 초기화 단계가 따로 분리되어 실행된다.
++ 그래서 선언 단계와 초기화 단계 사이에서는 실행 컨텍스트에는 변수를 등록했지만 메모리가 할당되지 않은 상태라 ReferenceError 가 나오는 것이다.
++ var는 변수의 선언단계와 초기화단계가 동시에 실행되어 TDZ가 존재하지 않기 때문에 호이스팅이 일어나는 것이다.
+
+````
+<script>
+    console.log(num); //Uncaught ReferenceError: Cannot access 'num' before initialization
+    let num; //num을 초기화 하지 않을 경우 접근 안됨(일시적 사각지대로 들어감)
+</script>
+````
+
 
        
 
