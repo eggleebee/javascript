@@ -395,10 +395,10 @@ true, false
 </script>
 ````
 
-### 참조타입(Object/Reference Type)
-+ 객체(Object)
-+ 배열(Array)
-+ 함수(Fuction)
+> 참조타입(Object/Reference Type)
+> + 객체(Object)
+> + 배열(Array)
+> + 함수(Fuction)
 
 > + 원시타입이 아닌 모든 것
 > + 참조타입은 원시타입 데이터의 집합이다.
@@ -490,6 +490,7 @@ true, false
 
 ### 지역 스코프(Local scope) 
 안쪽 스코프 라고하며 블록 안, 함수 내에서만 참조 할수있다.
+> 지역 변수(Local variable) : 안쪽 지역내에 선언된 변수 안에서만 참조 가능하다.
 
 ````
  <script>
@@ -502,7 +503,6 @@ true, false
     console.log(menuName, price)// 바깥쪽에서 참조불가
 </script>
 ````
-> 지역 변수(Local variable) : 안쪽 지역내에 선언된 변수 안에서만 참조 가능하다.
 
 > 함수 스코프와 블록 스코프(function scope & block scope)
 > + 지역 스코프에는 함수 스코프와 블록 스코프가 있다.
