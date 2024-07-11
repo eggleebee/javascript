@@ -199,6 +199,16 @@ const 변수명;
 const 변수명 = 값;
 ````
 
+## 변수의 타입
+
+> 타입
+> + 자바스크립트에는 타입(Type)이라는 개념이 있다.
+> + 타입이란 변수에 할당할 수 있는 데이터 형태를 말한다. ex)숫자, 문자
+> + 즉, 변수에는 숫자나 문자 등 다양한 형태의 데이터 타입을 담을 수 있다.
+> + 데이터 타입에 따라 할 수 있는 일이 다르다.
+> + 즉, 타입마다 다른 속성과 메서드가 있다.
+
+> typeof : 변수의 타입을 반환하는 자바스크립트 키워드
 > undefined : '아직 할당하지 않은 값'을 표현하기 위해 사용하는 값
 
 ### var (function scope)
@@ -278,129 +288,6 @@ const 변수명 = 값;
     console.log(txt); 
 </script>
 ````
-
-## 스코프란?
-+ 스코프(scope)는 변수에 접근할 수 있는 범위를 말한다.
-+ 스코프는 크게 전역 스코프와 지역 스코프로 나눌 수 있다.
-+ 스코프는 중첩이 가능하다.
-+ 가장 바깥은 전역스코프라 하고 나머지는 지역스코프다.
-+ 전역 스코프(global)는 어디에서든 해당 변수에 접근 가능한 걸 의미한다. (전역변수)
-+ 바깥쪽 스코프에서 선언한 변수(전역변수)는 안쪽에서 사용가능하다
-+ 지역 스코프(local)의 경우, 한정적인 범위에서 해당 변수에 접근이 가능하다. (지역변수)
-+ 안쪽 스코프에서 선언한 변수(지역변수)는 바깥쪽에서 사용불가다.
-+ 지역 변수가 전역변수보다 우선순위가 더 높다.
-
-## 스코프의 구분
-1. 전역 스코프(Global scope)
-2. 지역 스코프(Local scope) 
-
-### 전역 스코프(Global scope) 
-바깥 스코프 라고하며 어디에서든 참조 할수있다.
-
-````
-<script>
-    // 전역(바깥쪽) 스코프
-    let e, f, g;
-    let userName;
-    let age;
-
-    {
-        e = 10, f = 20, g = 30;
-        console.log('변수값 출력', e, f, g)
-    }
-
-    if (true) {
-        userName = "홍길동"
-        age = 20
-        console.log(userName)
-        console.log(age)
-    }
-
-    console.log('변수값 출력', e, f, g)
-    console.log(userName)
-    console.log(age)
-</script>
-````     
-> 전역 변수(Global variable) : 바깥쪽 전역에서 선언된 변수 어디든 참조 가능하다.
-
-### 지역 스코프(Local scope) 
-안쪽 스코프 라고하며 블록 안, 함수 내에서만 참조 할수있다.
-
-````
- <script>
-    if(true){
-        // 지역(안쪽) 스코프
-        const menuName = "라면"
-        const price = "4,000원"
-        console.log(menuName, price) 
-    }
-    console.log(menuName, price)// 바깥쪽에서 참조불가
-</script>
-````
-> 지역 변수(Local variable) : 안쪽 지역내에 선언된 변수 안에서만 참조 가능하다.
-
-## 블록 스코프와 함수 스코프 (block scope & function scope)
-+ 지역 스코프에는 함수 스코프와 블록 스코프가 있다.
-+ 중괄호를 기준으로 범위가 구분된다.
-+ function 을 제외한 if나 for 등의 { 중괄호 } 안에 있는 범위를 블록 스코프
-+ function{ } 안에있는 범위를 함수 스코프
-+ var은 블록스코프를 무시한다.
-
-## 함수 스코프와 var
-+ 함수가 선언되면 하나의 스코프(접근 범위)가 발생하는데 이걸 함수스코프라고 한다. 
-+ 함수 스코프는 함수에서 선언한 변수는 해당 함수 내에서만 접근 가능하다는 걸 의미한다.
-+ 아래 예시처럼 함수 외부에서 aa를 호출하면 undefined 에러가 뜬다.
-````
-<script>
-    function setNumber() {
-        var num = '12'; // 함수 내부에서 선언
-    }
-    console.log(num); 
-    // Uncaught ReferenceError: num is not defined
-</script>
-````
-
-+ 만약 변수가 함수 내부에 선언된 것이 아니면 이 변수의 스코프는 전역 스코프(global)이므로
-+ 어디에서든 접근이 가능하다.
-````
-<script>
-    var setNumber = '123'; 
-    console.log(setNumber)
-</script>
-````
-
-+ var은 함수 내에서만 지역 변수로 유지되기 때문에, 
-+ 아래 코드에서는 전역 변수로 취급된다.
-+ var로 선언하면 블록에 의한 범위 제한이 없음
-````
-<script>
-    {
-        a = 10, b = 20, c = 30;
-        console.log('변수값 출력', a, b, c)
-    }
-
-    if (true) {
-        var num = '456';
-        console.log(num) 
-    }
-    console.log(num)
-
-    for (var index = 0; index < 5; index++) {
-        console.log(index)
-    }
-    console.log(index)
-</script>
-````
-
-## typeof
-변수의 타입을 반환하는 자바스크립트 키워드
-
-## 타입
-+ 자바스크립트에는 타입(Type)이라는 개념이 있다.
-+ 타입이란 변수에 할당할 수 있는 데이터 형태를 말한다. ex)숫자, 문자
-+ 즉, 변수에는 숫자나 문자 등 다양한 형태의 데이터 타입을 담을 수 있다.
-+ 데이터 타입에 따라 할 수 있는 일이 다르다.
-+ 즉, 타입마다 다른 속성과 메서드가 있다.
 
 ## 자바스크립트의 데이터 타입
 1. 원시 타입 (Primitive Type)
@@ -557,6 +444,119 @@ true, false
         return x + y;
     }
     console.log(typeof add); // function
+</script>
+````
+
+## 스코프란?
++ 스코프(scope)는 변수에 접근할 수 있는 범위를 말한다.
++ 스코프는 크게 전역 스코프와 지역 스코프로 나눌 수 있다.
++ 스코프는 중첩이 가능하다.
++ 가장 바깥은 전역스코프라 하고 나머지는 지역스코프다.
++ 전역 스코프(global)는 어디에서든 해당 변수에 접근 가능한 걸 의미한다. (전역변수)
++ 바깥쪽 스코프에서 선언한 변수(전역변수)는 안쪽에서 사용가능하다
++ 지역 스코프(local)의 경우, 한정적인 범위에서 해당 변수에 접근이 가능하다. (지역변수)
++ 안쪽 스코프에서 선언한 변수(지역변수)는 바깥쪽에서 사용불가다.
++ 지역 변수가 전역변수보다 우선순위가 더 높다.
+
+## 스코프의 구분
+1. 전역 스코프(Global scope)
+2. 지역 스코프(Local scope) 
+
+### 전역 스코프(Global scope) 
+바깥 스코프 라고하며 어디에서든 참조 할수있다.
+
+````
+<script>
+    // 전역(바깥쪽) 스코프
+    let e, f, g;
+    let userName;
+    let age;
+
+    {
+        e = 10, f = 20, g = 30;
+        console.log('변수값 출력', e, f, g)
+    }
+
+    if (true) {
+        userName = "홍길동"
+        age = 20
+        console.log(userName)
+        console.log(age)
+    }
+
+    console.log('변수값 출력', e, f, g)
+    console.log(userName)
+    console.log(age)
+</script>
+````     
+> 전역 변수(Global variable) : 바깥쪽 전역에서 선언된 변수 어디든 참조 가능하다.
+
+### 지역 스코프(Local scope) 
+안쪽 스코프 라고하며 블록 안, 함수 내에서만 참조 할수있다.
+
+````
+ <script>
+    if(true){
+        // 지역(안쪽) 스코프
+        const menuName = "라면"
+        const price = "4,000원"
+        console.log(menuName, price) 
+    }
+    console.log(menuName, price)// 바깥쪽에서 참조불가
+</script>
+````
+> 지역 변수(Local variable) : 안쪽 지역내에 선언된 변수 안에서만 참조 가능하다.
+
+## 블록 스코프와 함수 스코프 (block scope & function scope)
++ 지역 스코프에는 함수 스코프와 블록 스코프가 있다.
++ 중괄호를 기준으로 범위가 구분된다.
++ function 을 제외한 if나 for 등의 { 중괄호 } 안에 있는 범위를 블록 스코프
++ function{ } 안에있는 범위를 함수 스코프
++ var은 블록스코프를 무시한다.
+
+## 함수 스코프와 var
++ 함수가 선언되면 하나의 스코프(접근 범위)가 발생하는데 이걸 함수스코프라고 한다. 
++ 함수 스코프는 함수에서 선언한 변수는 해당 함수 내에서만 접근 가능하다는 걸 의미한다.
++ 아래 예시처럼 함수 외부에서 aa를 호출하면 undefined 에러가 뜬다.
+````
+<script>
+    function setNumber() {
+        var num = '12'; // 함수 내부에서 선언
+    }
+    console.log(num); 
+    // Uncaught ReferenceError: num is not defined
+</script>
+````
+
++ 만약 변수가 함수 내부에 선언된 것이 아니면 이 변수의 스코프는 전역 스코프(global)이므로
++ 어디에서든 접근이 가능하다.
+````
+<script>
+    var setNumber = '123'; 
+    console.log(setNumber)
+</script>
+````
+
++ var은 함수 내에서만 지역 변수로 유지되기 때문에, 
++ 아래 코드에서는 전역 변수로 취급된다.
++ var로 선언하면 블록에 의한 범위 제한이 없음
+````
+<script>
+    {
+        a = 10, b = 20, c = 30;
+        console.log('변수값 출력', a, b, c)
+    }
+
+    if (true) {
+        var num = '456';
+        console.log(num) 
+    }
+    console.log(num)
+
+    for (var index = 0; index < 5; index++) {
+        console.log(index)
+    }
+    console.log(index)
 </script>
 ````
 
