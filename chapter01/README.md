@@ -461,7 +461,7 @@ true, false
 
 ## 전역 스코프(Global scope) 
 바깥 스코프 라고하며 어디에서든 참조 할수있다.
-전역 변수(Global variable) : 바깥쪽 전역에서 선언된 변수 어디든 참조 가능하다.
+> 전역 변수(Global variable) : 바깥쪽 전역에서 선언된 변수 어디든 참조 가능하다.
 
 ````
 <script>
