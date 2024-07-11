@@ -511,10 +511,7 @@ true, false
 
 | 함수 스코프(function scope) | 블록 스코프(block scope) | 
 | --- | --- |
-| function{ } 
-안에있는 범위를 함수 스코프 
-| function 을 제외한 
-if나 for 등의 { 중괄호 } 안에 있는 범위를 블록 스코프 |
+| function{ } 안에있는 범위를 함수 스코프 | function 을 제외한 if나 for 등의 { 중괄호 } 안에 있는 범위를 블록 스코프 |
 
 ### 함수 스코프와 var
 + 함수가 선언되면 하나의 스코프(접근 범위)가 발생하는데 이걸 함수스코프라고 한다. 
