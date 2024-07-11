@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printMsg() {
+            if (true) {
+                let msg = "안녕";
+                console.log("if문 안에서 접근", msg);
+            }
+            // console.log("if문 밖에서 접근 불가", msg);
+            // Uncaught ReferenceError: msg is not defined
+        }
+        printMsg();
+
+        function printTxt() {
+            let txt = "안녕";
+            if (true) {
+                let txt = "반가워"; // 이것은 if문 블록 내부에서만 유효하므로
+                console.log(txt);
+            }
+            console.log(txt); // 같은 스코프안에 있는 안녕이 출력됨
+        }
+        printTxt();
+
+        function printCount() {
+            let i;
+            for (i = 0; i <= 2; i++) {
+                console.log("printCount for문 안에서 접근", i)
+            }
+            console.log("printCount for문 밖에서 접근", i); // 0,1,2
+        }
+        printCount() // for문을 다 돌고난 후 i값은 3
+
+        let score;
+
+        function getScore() {
+            score = 80;
+        }
+        getScore()
+
+        console.log('당신의 점수는', score);
+    </script>
+</body>
+
+</html>

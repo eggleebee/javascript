@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const로 선언한 변수는 재할당이 안됩니다.
+        // Uncaught TypeError: Assignment to constant variable.
+        const menuName = "떡볶이";
+        const price = "3,000원";
+        console.log(menuName, price) 
+
+        if(true){
+            menuName = "라면"
+            price = "6,000원"
+        }
+        console.log(menuName, price)
+    </script>
+</body>
+
+</html>

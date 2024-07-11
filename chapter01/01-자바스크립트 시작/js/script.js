@@ -1,0 +1,1 @@
+console.log('script.js파일입니다.')

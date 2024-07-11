@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 전역(바깥쪽) 스코프
+        let e, f, g;
+        let userName;
+        let age;
+
+        {
+            e = 10, f = 20, g = 30;
+            console.log('변수값 출력', e, f, g)
+        }
+
+        if (true) {
+            userName = "홍길동"
+            age = 20
+            console.log(userName)
+            console.log(age)
+        }
+
+        console.log('변수값 출력', e, f, g)
+        console.log(userName)
+        console.log(age)
+    </script>
+</body>
+
+</html>

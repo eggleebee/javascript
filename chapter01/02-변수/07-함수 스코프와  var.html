@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 함수 스코프는 함수에서 선언한 변수는 해당 함수 내에서만 접근 가능
+        function setNumber() {
+            var num = '12'; // 함수 내부에서 선언
+        }
+        // console.log(num); 
+        // Uncaught ReferenceError: num is not defined
+        
+        // 함수 내부에 선언된 것이 아니면 전역 스코프(global)이므로
+        // 어디서든 접근가능 123
+        var setNumber = '123'; 
+        console.log(setNumber) 
+
+        // var은 함수 내에서만 지역 변수로 유지되기 때문에, 
+        // 아래 코드에서는 전역 변수로 취급된다.
+        // var로 선언하면 블록에 의한 범위 제한이 없음
+        {
+            a = 10, b = 20, c = 30;
+            console.log('변수값 출력', a, b, c)
+        }
+
+        if (true) {
+            var num = '456';
+            console.log(num) 
+        }
+        console.log(num)
+
+        for (var index = 0; index < 5; index++) {
+            console.log(index)
+        }
+        console.log(index)
+    </script>
+</body>
+
+</html>

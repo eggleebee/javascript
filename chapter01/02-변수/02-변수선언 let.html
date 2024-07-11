@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a; // 선언 후 할당을 나중에 해도 됨
+        console.log(a) // undefined 가 저장됨
+
+        let x, y, z;
+        console.log(x, y, z);//undefined
+
+        let year, month, day;
+        let address = "서울시";
+        console.log(month)//undefined
+
+        let name;
+        console.log(name)
+        name = "홍길동";
+        console.log(name);
+
+        let fruit = "사과", price = 3000;
+        console.log(fruit);
+        console.log(price);
+        console.log(fruit, price);
+        console.log(fruit, "1개 가격은", price, "원 입니다.");
+
+        // 중복선언불가 : Identifier 'b' has already been declared
+        let user = "이순신";
+        let user = "강감찬";
+        console.log(user);
+    </script>
+</body>
+
+</html>
