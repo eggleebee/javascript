@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <h1>JavaScript</h1>
+    <h2>데이터 타입 typeof</h2>
+
     <script>
         console.log(typeof 1); // number
 
@@ -22,19 +25,10 @@
         let str_1 = 'Hi';
         let str_2 = "안녕";
         let str_3 = `안녕 \n하세요  \n\t 반갑습니다`;
-        
+
         console.log(str_1);
         console.log(str_2);
         console.log(str_3);
-   
-        console.log(typeof true); // boolean
-        console.log(typeof false); // boolean
-        console.log(typeof { a: 1, b: 2 }); // object
-
-        function add(x, y) {
-            return x + y;
-        }
-        console.log(typeof add); // function
 
         let score = "68"
         let sum = score + 20
@@ -44,6 +38,25 @@
 
         const msg = "안녕하세요";
         console.log(msg)
+
+        console.log(typeof true); // boolean
+        console.log(typeof false); // boolean
+
+        let bool_1 = true;
+        let bool_2 = 2 > 3;
+        console.log(typeof bool_1); //boolean
+        console.log(typeof bool_2); //boolean
+
+        console.log(typeof { a: 1, b: 2 }); // object
+
+        function add(x, y) {
+            return x + y;
+        }
+        console.log(typeof add); // function
+
+        let nu = null;
+        console.log(typeof nu);	//object
+        console.log(nu === null); //true
     </script>
 </body>
 
