@@ -348,8 +348,6 @@ const 변수명 = 값;
 </script>
 ````
 
-
-
 ## Boolean(불리언)
 true, false
 ````
@@ -506,7 +504,7 @@ true, false
 </script>
 ````
 
-> 함수 스코프와 블록 스코프(function scope & block scope)
+## 함수 스코프와 블록 스코프(function scope & block scope)
 > + 지역 스코프에는 함수 스코프와 블록 스코프가 있다.
 > + { 중괄호 }를 기준으로 범위가 구분된다.
 > + var은 블록스코프를 무시한다.
@@ -561,7 +559,7 @@ true, false
 </script>
 ````
 
-> 블록 스코프와 let, const
+## 블록 스코프와 let, const
 > + 블록 스코프는 블록 { 중괄호 } 내부에서 선언된 변수는 해당 블록에서만 접근 가능한 걸 말한다.
 > + let, const로 선언된 변수가 블록 스코프 방식을 따른다.
 
