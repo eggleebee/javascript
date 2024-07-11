@@ -11,15 +11,17 @@
 <body>
     <h1>JavaScript</h1>
     <h2>자바스크립트의 데이터 타입</h2>
-    <h3>참조타입(Object/Reference Type)</h3>
-    <h4>Array</h4>
+    <h3>원시 타입 (Primitive Type)</h3>
+    <h4>boolean</h4>
 
     <script>
-        let arr = [1,2,3,4];
-        console.log(typeof arr); //object
-    
-        console.log(Array.isArray(arr)); // true
-        console.log(Array.isArray({})); // false
+        console.log(typeof true); // boolean
+        console.log(typeof false); // boolean
+
+        let bool_1 = true;
+        let bool_2 = 2 > 3;
+        console.log(typeof bool_1); //boolean
+        console.log(typeof bool_2); //boolean
     </script>
 </body>
 

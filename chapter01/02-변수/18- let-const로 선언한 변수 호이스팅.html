@@ -11,13 +11,9 @@
 <body>
     <h1>JavaScript</h1>
     <h2>변수 선언에서 hoisting(호이스팅)</h2>
-    <script>
-        // 호이스팅 때문에 선언이 끌어올려져서 오류 안남.
-        console.log(text); // (선언 + 초기화 된 상태)
-        text = '안녕!'; // (선언 + 초기화 + 할당 된 상태)
-        var text;
-        console.log(text);
+    <h3>let, const로 선언한 변수 호이스팅</h3>
 
+    <script>
         // 호이스팅 때문에 선언이 끌어올려졌지만 초기화 안된 상태에서 참조해서 오류 남.
         console.log(str); 
         // (선언 된 상태, 초기화(메모리 공간 확보와 undefined로 초기화) 안되서 참조 불가능 → 에러남 )
