@@ -632,15 +632,15 @@ true, false
 ## 변수는 어떻게 생성되며, 호이스팅은 어떻게 이뤄질까?
 변수는 3단계에 걸쳐 생성된다.
 
-1. 1단계: 선언 단계(Declaration phase)
+### 1단계: 선언 단계(Declaration phase)
 + 변수를 실행 컨텍스트의 변수 객체에 등록한다.
 + 이 변수 객체는 스코프가 참조하는 대상이 된다.
 
-2. 2단계: 초기화 단계(Initialization phase)
+### 2단계: 초기화 단계(Initialization phase)
 + 변수 객체에 등록된 변수를 위한 공간을 메모리에 확보한다.
 + 이 단계에서 변수는 undefined로 초기화 된다.
 
-3. 3단계: 할당 단계(Assignment phase)
+### 3단계: 할당 단계(Assignment phase)
 + undefined로 초기화된 변수에 실제 값을 할당한다.
 
 ## var로 선언한 변수 호이스팅
