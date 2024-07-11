@@ -201,7 +201,7 @@ const 변수명 = 값;
 
 > undefined : '아직 할당하지 않은 값'을 표현하기 위해 사용하는 값
 
-## var (function scope)
+### var (function scope)
 + var문에서 변수에 초기 값을 지정하지 않는다면, 변수는 값이 설정될 때까지 undefined 값을 갖게 된다.
 + var의 경우 변수를 한 번 더 선언해도 에러가 나지 않는다.
 
@@ -222,7 +222,7 @@ const 변수명 = 값;
 </script>
 ````
 
-## let (block scope)
+### let (block scope)
 + 이미 선언되었다는 에러 메세지가 나온다.
 + 변수 재선언은 안된다.
 + 하지만 변수 재할당은 가능하다.
@@ -257,7 +257,7 @@ const 변수명 = 값;
 </script>
 ````
 
-## const (block scope)
+### const (block scope)
 + 변수 재선언, 재할당 모두 불가능하다.
 + 처음 선언할 때, 반드시 초기화를 해야한다.
 + 바뀌지 않을 값은 const로 선언해주면 된다.
@@ -294,7 +294,7 @@ const 변수명 = 값;
 1. 전역 스코프(Global scope)
 2. 지역 스코프(Local scope) 
 
-## 전역 스코프(Global scope) 
+### 전역 스코프(Global scope) 
 바깥 스코프 라고하며 어디에서든 참조 할수있다.
 
 ````
@@ -323,7 +323,7 @@ const 변수명 = 값;
 ````     
 > 전역 변수(Global variable) : 바깥쪽 전역에서 선언된 변수 어디든 참조 가능하다.
 
-## 지역 스코프(Local scope) 
+### 지역 스코프(Local scope) 
 안쪽 스코프 라고하며 블록 안, 함수 내에서만 참조 할수있다.
 
 ````
