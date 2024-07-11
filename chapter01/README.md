@@ -683,8 +683,8 @@ true, false
 
 ````
 <script>
-    console.log(num); //Uncaught ReferenceError: Cannot access 'num' before initialization
-    let num; //num을 초기화 하지 않을 경우 접근 안됨(일시적 사각지대로 들어감)
+    console.log(num); // Uncaught ReferenceError: Cannot access 'num' before initialization
+    let num; // num을 초기화 하지 않을 경우 접근 안됨(일시적 사각지대로 들어감)
 </script>
 ````
 
