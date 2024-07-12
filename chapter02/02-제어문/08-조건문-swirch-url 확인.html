@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>switch</h3>
+    <h4>url 확인</h4>
+
+    <script>
+        const site = '구글';
+        let url;
+
+        switch( site ) {
+            case '네이버' :
+                url = 'https://www.naver.com';
+                break;
+            case '구글' :
+                url = "https://www.google.co.kr"
+                break;
+            case '다음' :
+                url = "https://www.daum.net"
+                break;
+            default :
+                document.write('사이트를 확인하세요!')
+                break;
+        }
+
+        console.log( url )
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>switch</h3>
+    <h4>요일 확인</h4>
+
+    <script>
+        const engDay = 'friday';
+        let korDay;
+
+        switch (engDay) {
+            case 'monday':
+                korDay = '월요일';
+                break;
+            case 'tuesday':
+                korDay = '화요일';
+                break;
+            case 'wednesday':
+                korDay = '수요일';
+                break;
+            case 'thursday':
+                korDay = '목요일';
+                break;
+            case 'friday':
+                korDay = '금요일';
+                break;
+            default:
+                korDay = '주말';
+                break;
+        }
+
+        console.log(korDay)
+    </script>
+</body>
+
+</html>

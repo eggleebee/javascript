@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>switch</h3>
+    <h4>나이 확인</h4>
+
+    <script>
+        let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19', 17 )
+
+        switch( parseInt(age) ){
+            case 17 : 
+                alert('고등학교 1학년 입니다');
+                break;
+            case 18 :
+                alert('고등학교 2학년 입니다');
+                break;
+            case 19 :
+                alert('고등학교 3학년 입니다');
+                break;
+            default :
+                alert('나이를 잘못 입력하셨습니다');
+                break;
+        }
+
+        console.log( '입력받은 나이는?', age )
+        console.log( '입력받은 나이의 데이터 타입 확인', typeof age ) // string
+        console.log( age + 100 ) // + 문자끼리 연결연산자
+
+        console.log( age - 10 ) // 자동형변환되어 숫자로 계산이 된 것임
+        console.log( age * 20 ) // 자동형변환되어 숫자로 계산이 된 것임
+
+        let x = "156";
+        console.log('x값의 타입은?' , typeof x ) // string
+
+        x = Number(x)
+        
+        console.log( 'x값의 타입은?', typeof x ) // number
+        console.log( 'x값?', x ) // 
+
+        let y = "789"
+        console.log('y값의 타입은?' , typeof y ) // string
+
+        y = parseInt( y )
+        console.log('y값의 타입은?' , typeof y ) // number
+    </script>
+</body>
+
+</html>

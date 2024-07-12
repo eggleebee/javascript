@@ -334,7 +334,7 @@
 </script>
 ````
 
-## if, else if
+## if, else if 문
 + if...else문은 주어진 조건식(불리언 값으로 평가될 수 있는 표현식)의 평가 결과(참 또는 거짓)에 따라 실행할 코드 블록을 결정한다. 
 + 조건식의 평가 결과가 true일 경우 if문의 코드 블록이 실행되고, 
 + false일 경우 else문의 코드블록이 실행된다. 
@@ -345,6 +345,7 @@
 
 ````
 <script>
+    // if
     if (!false) {
         console.log('안녕')
     }
@@ -357,7 +358,11 @@
         console.log('잘가')
 
     }
+</script>
+````
 
+````
+<script>
     // if, else
     let x = 2;
 
@@ -370,7 +375,11 @@
     } else {
         console.log('33을 2로 나눈 나머지가 0이 아닐 경우에 실행됩니다.')
     }
+</script>
+````
 
+````
+<script>
     // if문 여러개 따로따로
     // if - if 로 사용하게 되면 각각 다른 조건 문으로 해석되어 각각 수행하게 됨
     var age = 12;
@@ -392,14 +401,6 @@
         charge = 3000;
         document.write("일반인 입니다.");
     }
-
-    // 코드 블록 내의 문이 하나라면 중괄호를 생략
-    var num = 2;
-    var kind;
-
-    if (num > 0) kind = '양수';
-    else if (num < 0) kind = '음수';
-    else kind = '0';
 </script>
 ````
 
@@ -434,5 +435,137 @@
 </script>
 ````
 
+````
+<script>
+    // 코드 블록 내의 문이 하나라면 중괄호를 생략
+    var num = 2;
+    var kind;
 
+    if (num > 0) kind = '양수';
+    else if (num < 0) kind = '음수';
+    else kind = '0';
+</script>    
+````
+
+## switch문
++ switch문은 주어진 표현식을 평가하여 그 값과 일치하는 표현식을 갖는 case문으로 실행 흐름을 옮긴다.
++ case문은 상황을 의미하는 표현식을 지정하고 콜론으로 마친다. 
++ 그리고 그 뒤에 실행할 문들을 위치시킨다.
++ switch문의 표현식과 일치하는 case문이 없다면 실행 순서는 default문으로 이동한다. 
++ default문은 선택사항으로, 사용할 수도 있고 사용하지 않을 수도 있다.
++ case문에 해당하는 문의 마지막에 break문을 사용하지 않는다면 문을 실행한 후 switch문을 탈출하지 않고 switch문이 끝날 때까지 이후의 모든 case문과 default문을 실행하게 된다. 이를 폴 스루라고 말한다.
++ default문에는 break문을 생략하는 것이 일반적이다. default문은 switch문의 맨 마지막에 위치하므로 default문의 실행이 종료되면 switch문을 빠져나가기 때문이다.
+
+> if...else문은 논리적 참, 거짓으로 실행할 코드 블록을 결정한다. 반면에 switch문은 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.
+
+````
+<script>
+    switch (표현식) {
+        case 표현식1:
+            switch문의 표현식과 표현식1이 일치하면 실행될 문;
+            break;
+        case 표현식2:
+            switch문의 표현식과 표현식2가 일치하면 실행될 문;
+            break;
+        default:
+            switch문의 표현식과 일치하는 case문이 없을 때 실행될 문;
+    }
+</script>
+````
+
+````
+ <script>
+        const engDay = 'friday';
+        let korDay;
+
+        switch (engDay) {
+            case 'monday':
+                korDay = '월요일';
+                break;
+            case 'tuesday':
+                korDay = '화요일';
+                break;
+            case 'wednesday':
+                korDay = '수요일';
+                break;
+            case 'thursday':
+                korDay = '목요일';
+                break;
+            case 'friday':
+                korDay = '금요일';
+                break;
+            default:
+                korDay = '주말';
+                break;
+        }
+
+        console.log(korDay)
+    </script>
+````
+
+````
+ <script>
+    const site = '구글';
+    let url;
+
+    switch( site ) {
+        case '네이버' :
+            url = 'https://www.naver.com';
+            break;
+        case '구글' :
+            url = "https://www.google.co.kr"
+            break;
+        case '다음' :
+            url = "https://www.daum.net"
+            break;
+        default :
+            document.write('사이트를 확인하세요!')
+            break;
+    }
+
+    console.log( url )
+</script>
+````
+
+````
+<script>
+    let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19', 17 )
+
+    switch( parseInt(age) ){
+        case 17 : 
+            alert('고등학교 1학년 입니다');
+            break;
+        case 18 :
+            alert('고등학교 2학년 입니다');
+            break;
+        case 19 :
+            alert('고등학교 3학년 입니다');
+            break;
+        default :
+            alert('나이를 잘못 입력하셨습니다');
+            break;
+    }
+
+    console.log( '입력받은 나이는?', age )
+    console.log( '입력받은 나이의 데이터 타입 확인', typeof age ) // string
+    console.log( age + 100 ) // + 문자끼리 연결연산자
+
+    console.log( age - 10 ) // 자동형변환되어 숫자로 계산이 된 것임
+    console.log( age * 20 ) // 자동형변환되어 숫자로 계산이 된 것임
+
+    let x = "156";
+    console.log('x값의 타입은?' , typeof x ) // string
+
+    x = Number(x)
+    
+    console.log( 'x값의 타입은?', typeof x ) // number
+    console.log( 'x값?', x ) // 
+
+    let y = "789"
+    console.log('y값의 타입은?' , typeof y ) // string
+
+    y = parseInt( y )
+    console.log('y값의 타입은?' , typeof y ) // number
+</script>
+````
 
