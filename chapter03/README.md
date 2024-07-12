@@ -1,2 +1,88 @@
-## 배열과 자료구조
-## 함수
+# 01-배열과 자료구조
+## 배열
++ 배열은 여러 자료를 묶어서 활용할 수 있는 특수한 자료구조로 여러 개의 변수를 한 번에 선언해 다룰 수 있는 자료형이다.
++ 배열은 순서가 있는 값으로 리스트와 비슷한 객체이다.
++ 배열은 대괄호[…]를 사용해 생성하고 내부의 값을 쉼표(,)로 구분해 입력한다. 
++ 배열 내부에 들어 있는 값을 요소라한다. 
++ 배열의 길이와 요소의 자료형은 고정되어 있지 않다.(어떠한 종류의 자료형도 요소가 될 수 있음)
+
+## 배열을 만드는 방법 2가지
+> + 배열 리터럴 대괄호([ ])를 사용하여 만드는 방법
+> + Array() 생성자 함수로 배열을 생성하는 방법
+
+````
+<script>
+    // 초기값 할당
+    const colors = ['빨강', '노랑', '파랑']
+    console.log(colors)
+
+    // 빈 배열
+    const nums = []
+    nums[0] = 100
+    nums[1] = 200
+    nums[2] = 300
+    console.log(nums)
+
+    // 배열 크기 지정
+    const arr = [, , , ,]
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]) // 값이 할당되지 않아서 undefined 4번 출력
+    }
+
+    // 서로 다른 데이터 타입을 담을 수 있다.    
+    var array = [123, '안녕하세요', true, function () { }, [123, 456], ['딸기', '바나나']]
+    console.log(array)
+    console.log(array.length) // 6
+
+    // 배열의 크기를 임의로 변경
+    array.length = 2;
+    console.log(array)
+    console.log(array.length)
+
+    // 새로운 배열을 추가하면 크기는 자동으로 변경 
+    array[5] = 'apple';
+    console.log(array)
+    console.log(array.length)
+
+    // 새로운 배열 추가로 크기 변경
+    array.push('banana');
+    console.log(array)
+    console.log(array.length)
+
+    for (var i = 0; i < array.length; i++) {
+        document.write(array[i], "<br>");
+    }
+</script>
+````
+
+````
+<script>
+    // 빈 배열
+    var arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    document.write(arr[0], "<br>");
+    document.write(arr[1], "<br>");
+    document.write(arr[2], "<br>");
+
+    // 배열 생성 (초기 값 할당)
+    var arr = new Array('zero', 'one', 'tow');
+
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    // 배열 생성 (배열 크기 지정)
+    // 원소가 1개이고 숫자인 경우 배열 크기로 사용됨
+    var arr = new Array(3);
+
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]); // 값이 할당되지 않아서 undefined 3번 출력  
+    }
+</script>
+````
+
+# 02-함수
