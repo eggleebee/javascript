@@ -23,6 +23,7 @@
 > [자바스크립트 연산자 우선순위 수치 참고] <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence>
 
 
+
 | 순위 | 기능 | 연산자 | 연산자 | 연산자 | 연산자 | 연산자 | 연산자 |
 |------|---|---|---|---|---|---|---|
 | 1 | 괄호 | ( ) | | | | | |
@@ -35,6 +36,11 @@
 | 8 | 논리 연산자 or | || | | | | | |
 | 9 | 대입 연산자 | = | += | -= | *= | /= | %= | | |
 
+   (1 + ( (2 ** 3) * 4 / 5) ) >> 6
+// │    │ └─ 1. ─┘        │ │
+// │    └────── 2. ───────┘ │
+// └────────── 3. ──────────┘
+
 
 ````
 <script>
@@ -44,36 +50,6 @@
 </script>
 ````
 
-````
-<script>
-    var a = 5 , b = 3;
-    console.log("a에 대입된 값은 " , a);
-    console.log("b에 대입된 값은 " , b);
 
-    console.log(a+b); //8 
-    console.log(a-b); //2 
-    console.log(a*b); //15
-    console.log(a/b); //1.666666.... 
-    console.log(a%b); //2
-
-    var c = 1;
-    console.log("c++ 한 경우");
-    console.log(c); // 처음에 변수에 저장된 1을 의미
-    console.log(c++); // 처음에 변수에 저장된 1에 1을 더해라 라는 의미
-    console.log(c); // 덧셈 결과를 확인
-
-    var d = 10;
-    console.log("d-- 한 경우");
-    console.log(d); // 처음에 변수에 저장된 10을 의미
-    console.log(d--); // 처음에 변수에 저장된 10에 1을 빼라 라는 의미
-    console.log(d); // 뺄셈 결과를 확인
-
-    var e = 10 + 3 * 2; // 곱하기 먼저 계산
-    console.log(e);
-
-    var f = (10 + 3) * 2 // 괄호 먼저 계산
-    console.log(f);
-</script>    
-````
 
 # 02-제어문
