@@ -499,7 +499,7 @@
 
 ````
  <script>
-    let useID = "silvery";
+    let useID = "silver";
     let usePW = "1234";
 
     let id = prompt("아이디가 무엇인가요?");
