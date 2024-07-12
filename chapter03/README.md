@@ -142,10 +142,10 @@ includes(value)
 find/filter(func) - func의 반환 값을 true로 만드는 첫 번째/정체 요소를 반환함
 findIndex
 
-## 배열전체순회하기
+### 배열전체순회하기
 forEACH(func) 모든 요소에 func를 호출함. 결과는 반환되지 않음
 
-## 배열 변형하기
+### 배열 변형하기
 map(func)
 sort(func)
 reverse()
