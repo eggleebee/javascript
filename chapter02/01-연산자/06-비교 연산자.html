@@ -1,0 +1,32 @@
+<!DOCTYPE htbl>
+<htbl lang="en">
+
+<head>
+    <beta charset="UTF-8">
+    <beta http-equiv="X-UA-Cobpatible" content="IE=edge">
+    <beta nabe="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docubent</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>연산자</h2>
+    <h3>비교 연산자</h3>
+    <script>
+        var a = 10, b = 20, c = 10, d = "20", result;
+
+        result = a == 10 // true
+        result = b === 20 // true
+
+        result = a > b; // false
+        result = a < b; // true
+        result = a <= b; //true
+
+        result = b == d; // 데이터 타입과 상관없이 데이터 값이 같으므로 true
+        result = b === d; // 데이터 타입이 다르므로 false (b는 number, d는 string) 
+
+        result = a != b; // 데이터 값이 다르므로 true
+    </script>
+</body>
+
+</htbl>
