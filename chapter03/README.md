@@ -27,6 +27,11 @@
 ## 배열의 반복문
 반복문을 이용하여 배열안의 값들을 하나씩 돌면서 전부 출력할 수 있다.
 
+### for
+### forEach
+### for in
+### map
+
 ````
 <script>
     // 초기값 할당
@@ -112,5 +117,57 @@
     }
 </script>
 ````
+
+https://velog.io/@promotion_dev/Javascript-%EB%B0%B0%EC%97%B4%EA%B3%BC-%EB%B0%98%EB%B3%B5%EB%AC%B8
+
+https://hongong.hanbit.co.kr/javascript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1-%EC%9A%94%EC%86%8C-%EC%B6%94%EA%B0%80%EC%99%80-%EC%A0%9C%EA%B1%B0/
+
+https://9silvery2.gitbook.io/javascript/javascript/undefined-2
+
+https://dinfree.com/lecture/frontend/123_js_2.html#m5
+
+## 배열의 주요 메서드
+### 요소를 더하거나 지우는 메서드
+push
+pop
+shift
+unshift
+splice
+splice
+contact
+
+### 원하는 요소 찾기 메서드
+indexOF/lastIndexOf(item,pos)
+includes(value)
+find/filter(func) - func의 반환 값을 true로 만드는 첫 번째/정체 요소를 반환함
+findIndex
+
+## 배열전체순회하기
+forEACH(func) 모든 요소에 func를 호출함. 결과는 반환되지 않음
+
+## 배열 변형하기
+map(func)
+sort(func)
+reverse()
+split/jion
+reduce
+
+### 데이터 변경
+> + push(): 배열의 끝에 값을 추가.
+> + pop(): 배열 마지막 값을 제거.
+> + shift(): 배열 데이터를 왼쪽으로 하나씩 밀어 맨앞 값을 제거.
+> + splice(): 배열값을 추가하거나 제거해서 반환.
+> + reverse(): 배열을 역순으로 재배치.
+> + sort(): 배열 데이터를 정렬
+
+## 배열의 일부를 반환
+> + concat(): 두개의 배열을 합침.
+> + join(): 배열 데이터 사이에 원하는 문자열을 넣어 구분자로 사용.
+> + slice(): 배열의 일부을 지정해서 가져옴.
+
+### 데이터 순회
+> + map(): 모든 배열 데이터마다 반복 처리가 필요한 경우 사용.
+> + filter(): 특정 조건을 만족하는 데이터만 처리할 경우 사용.
+> + reduce(): 모든 데이터를 순화하면서 누적 연산이 필요한 경우 사용.
 
 # 02-함수
