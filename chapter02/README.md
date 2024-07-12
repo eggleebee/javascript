@@ -20,7 +20,16 @@
 + 만약 기존 우선순위를 무시하고 먼저 연산을 하고 싶은 부분이 있다면, 해당 연산자와 피연산자를 ( 소괄호 )로 감싸면 됩니다.
 + 괄호를 묶은 연산자가 제일 먼저 연산이 되지만, 만약 아래와 같이 모두 우선순위가 같은 연산자가 나열되어 있다면 보통 왼쪽에서 오른쪽으로 순차적으로 연산이 됩니다.
 
-> 자바스크립트 연산자 우선순위 수치 참고 <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence>
+> [자바스크립트 연산자 우선순위 수치 참고] <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence>
+
+
+| 순위 | 기능 | 연산자 |  |  |
+|------|---|---|---|
+| 1 | 괄호 | ( ) |  |
+| 2 | 증감/논리연산자 not | ++ | -- | ! |
+| 3 | 산술 연산자 곱셈,나누기,나머지 | * | / | % |
+| 4 | 산술 연산자 덧셈,뺄셈 | + | - |  |
+
 
 ````
 <script>
