@@ -78,6 +78,69 @@
 </script>
 ````
 
+## 대입 연산자
++ 대입 연산자(=)는 연산된 데이터를 최종적으로 변수에 저장할 사용한다.
+> 복합 대입 연산자(+=, -=, *=, /=, %=)는 
+> 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말한다.
+
+````
+<script>
+    var num1 = 10;
+    var num2 = 3;
+
+    num1 += num2;  //num1 = num1 + num2;
+    document.write(num1, "<br>");
+
+    num1 -= num2;  //num1 = num1 - num2;
+    document.write(num1, "<br>");
+
+    num1 *= num2; //num1 = num1 * num2;
+    document.write(num1, "<br>");
+
+    num1 %= num2; //num1 = num1 % num2;
+    document.write(num1, "<br>");
+
+    // HTML 태그들을 복합 대입 연산자를 이용하여 하나의 문자로 결합하려면 아래처럼 할 수 있다.
+    var t = "<table border='1'>";
+
+    t += "<tr>";
+    t += "<td>첫번째 칸</td><td>두번째 칸</td><td>세번째 칸</td>";
+    t += "<tr>";
+    t += "</table>";
+
+    document.write(t);
+</script>
+````
+
+## 증감 연산자
++ 증감 연산자에는 숫자형 데이터를 1씩 증가시키는 증가 연산자(++)가 있고, 
++ 1씩 감소시키는 감소 연산자(–)가 있다.
++ 증감 연산자는 앞에서 배운 연산자와는 다르게, 피연산자가 한개만 필요한 단항 연산자이다.
++ 증감 연산자는 변수의 어느 위치에 오는지에 따라 결과값이 달라진다.
+
+````
+<script>
+    var x = ++x; // 변수 x의 데이터를 1 증가시킨 뒤에 변수 x에 저장함
+    var y = y++; // 변수 y에 변수 y의 데이터를 저장하고난 뒤에 변수 y의 데이터를 1 증가시킴
+
+    var num1 = 10;
+    var num2 = 20;
+    var result;
+
+    num1--;
+    document.write(num1, "<br>"); //10에서 1 감소된 값인 9가 출력됨
+
+    num1++;
+    document.write(num1, "<br>"); // 9에서 1 증가된 값인 10이 출력됨
+
+    result = num2++;
+    document.write(result, "<br>"); // 대입 연산자가 먼저 실행되고, 증가 연산자가 실행되기 때문에 20이 출력됨
+
+    result = ++num2;
+    document.write(result, "<br>"); // 증가 연산자가 먼저 실행되고, 대입 연산자가 실행되기 때문에 22가 출력됨
+</script>
+````
+
 ## 연산자 우선순위
 + 학교 수학시간에 배웠듯이 사칙연산에서는 곱하기가 우선적으로 연산됩니다.
 + 곱하기와 나누기 연산이 덧셈과 뺄셈 연산보다 우선적으로 실행됩니다.
@@ -130,39 +193,8 @@
 </script>
 ````
 
-## 대입 연산자
-+ 대입 연산자(=)는 연산된 데이터를 최종적으로 변수에 저장할 사용한다.
-> 복합 대입 연산자(+=, -=, *=, /=, %=)는 
-> 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말한다.
 
-````
-<script>
-    var num1 = 10;
-    var num2 = 3;
 
-    num1 += num2;  //num1 = num1 + num2;
-    document.write(num1, "<br>");
-
-    num1 -= num2;  //num1 = num1 - num2;
-    document.write(num1, "<br>");
-
-    num1 *= num2; //num1 = num1 * num2;
-    document.write(num1, "<br>");
-
-    num1 %= num2; //num1 = num1 % num2;
-    document.write(num1, "<br>");
-
-    // HTML 태그들을 복합 대입 연산자를 이용하여 하나의 문자로 결합하려면 아래처럼 할 수 있다.
-    var t = "<table border='1'>";
-
-    t += "<tr>";
-    t += "<td>첫번째 칸</td><td>두번째 칸</td><td>세번째 칸</td>";
-    t += "<tr>";
-    t += "</table>";
-
-    document.write(t);
-</script>
-````
 
 
 # 02-제어문

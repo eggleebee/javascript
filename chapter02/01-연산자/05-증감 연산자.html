@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>연산자</h2>
+    <h3>증감 연산자</h3>
+    <script>
+        var x = ++x; // 변수 x의 데이터를 1 증가시킨 뒤에 변수 x에 저장함
+        var y = y++; // 변수 y에 변수 y의 데이터를 저장하고난 뒤에 변수 y의 데이터를 1 증가시킴
+
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--;
+        document.write(num1, "<br>"); //10에서 1 감소된 값인 9가 출력됨
+
+        num1++;
+        document.write(num1, "<br>"); // 9에서 1 증가된 값인 10이 출력됨
+
+        result = num2++;
+        document.write(result, "<br>"); // 대입 연산자가 먼저 실행되고, 증가 연산자가 실행되기 때문에 20이 출력됨
+
+        result = ++num2;
+        document.write(result, "<br>"); // 증가 연산자가 먼저 실행되고, 대입 연산자가 실행되기 때문에 22가 출력됨
+    </script>
+</body>
+
+</html>
