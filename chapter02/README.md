@@ -1,3 +1,52 @@
 # 01-연산자
+## 산술 연산자
++ 산술연산자는 숫자들의 산술적인 연산을 수행합니다 (상수, 변수 모두 연산가능)
++ 일반적인 산술연산자는 두개의 수를 연산합니다.
+
+| 연산자 | 의미 | 설명 | 예제 |
+|------|---|---|---|
+| + | 덧셈 | 숫자들을 더하는 덧셈 연산자입니다. |var x = 5; <br> var y = 2; <br> var z = x + y; |
+| - | 뺄셈 | 숫자들을 빼는 뺄셈 연산자입니다. | var x = 5; <br> var y = 2; <br> var z = x - y; |
+| * | 곱셈 | 숫자들을 곱하는 곱셈 연산자입니다. | var x = 5; <br> var y = 2; <br> var z = x * y; |
+| / | 나누기 | 숫자들을 나누는 나누기 연산자입니다. | var x = 5; <br> var y = 2; <br> var z = x / y; |
+| % | 나머지 | 몫을 제외한 나머지값을 반환하는 나머지 연산자입니다. | var x = 5; <br> var y = 2; <br> var z = x % y; |
+| ++ | 가산(증가) | 숫자를 증가시키는 가산연산자입니다. | var x = 5; <br> x++; <br> var z = x; |
+| -- | 감산(감소) | 숫자를 감소시키는 가산연산자입니다. | var x = 5; <br> x--; <br> var z = x; |
+| ** | 제곱 | 첫번째 피연산자를 두번째 피연산자의 갯수만큼 곱합니다. | var x = 5; <br> var z = x**2; // 결과값은 25 |
+
+
+````
+<script>
+    var a = 5 , b = 3;
+    console.log("a에 대입된 값은 " , a);
+    console.log("b에 대입된 값은 " , b);
+
+    console.log(a+b); //8 
+    console.log(a-b); //2 
+    console.log(a*b); //15
+    console.log(a/b); //1.666666.... 
+    console.log(a%b); //2
+
+    var c = 1;
+    console.log("c++ 한 경우");
+    console.log(c); // 처음에 변수에 저장된 1을 의미
+    console.log(c++); // 처음에 변수에 저장된 1에 1을 더해라 라는 의미
+    console.log(c); // 덧셈 결과를 확인
+
+    var d = 10;
+    console.log("d-- 한 경우");
+    console.log(d); // 처음에 변수에 저장된 10을 의미
+    console.log(d--); // 처음에 변수에 저장된 10에 1을 빼라 라는 의미
+    console.log(d); // 뺄셈 결과를 확인
+    console.log(d--);
+    console.log(d);
+
+    var e = 10 + 3 * 2; // 곱하기 먼저 계산
+    console.log(e);
+
+    var f = (10 + 3) * 2 // 괄호 먼저 계산
+    console.log(f);
+</script>    
+````
 
 # 02-제어문
