@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>if 이중중첩문을 활용한 조건문</h3>
+
+    <script>
+        var userId = "apple";
+        var password = 12345;
+
+        if (userId === "apple") {    // 만약 아이디가 apple이면 아래 if문을 실행, 아니면 실행하지 X
+            if (password === 12345) { // 바깥 조건식이 통과하면, 실행된다. 
+                console.log('로그인 되었습니다')   // 비번이 12345를 입력한다면 조건식을 통과하면 '로그인 되었습니다'출력
+            } else {                 // 만약 아이디가 apple인데, 비번을 틀리게 입력했다면? 
+                console.log('비밀번호가 일치하지 않습니다.')
+            }    // 안에 if문은 실행되지 않고, "비밀번호가 일치하지 않습니다" 문구가 출력된다.
+        } 
+    </script>
+</body>
+
+</html>
