@@ -190,6 +190,39 @@
 > + && - AND 연산자는 연산자 왼쪽과 오른쪽의 값이 모두 true이면 true, 한 쪽이라도 false이면 false 를 반환한다.
 > + ! - NOT 연산자는 truthy 한 값이 들어오면 false를 반환하고, falsy 한 값이 들어오면 true 를 반환한다.
 
+````
+<script>
+    // 논리합(||) 연산자 OR 또는
+    // 두개 이상의 조건이 있을때
+    // 조건 중 하나라도 만족하면 결과는 true이다
+    true || true   // true
+    true || false  // true
+    false || true  // true
+    false || false // false
+
+    // 논리곱(&&) 연산자 AND 그리고 
+    // 두개 이상의 조건이 있을때
+    // 두개 이상의 조건을 모두 만족(true)했을 때 결과는 true이다
+    true && true   // true
+    true && false  // false
+    false && true  // false
+    false && false // false
+
+    // 논리 부정(!) 연산자
+    !true  // false
+    !false // true
+
+    var height = 160;
+    var age = 15;
+
+    // 키가 180이상 그리고 나이가 20세 이상 그리고 나이가 30세 이하인가?
+    height >= 180 && age >= 20 && age <= 30; // false
+
+    // 나이가 18세 보다 작거나 65세 보다 큰가?
+    age < 18 || age > 65;
+</script>
+````
+
 ### Truthy & Falsy
 + 자바스크립트에는 truthy와 falsy 라는 개념이 있다. 
 + 참/거짓을 판단하는 컨텍스트에서 truthy 한 값은 true로, falsy 한 값은 false로 판단된다.
