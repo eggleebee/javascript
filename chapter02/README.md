@@ -497,6 +497,28 @@
 </script>
 ````
 
+````
+ <script>
+    let useID = "silvery";
+    let usePW = "1234";
+
+    let id = prompt("아이디가 무엇인가요?");
+    let pw = prompt("비밀번호가 무엇인가요?");
+
+    if (useID == id) {
+        //아이디가 같을 때
+        if (usePW == pw) {
+            document.write(id + "님 반갑습니다.");
+        } else {
+            document.write("비밀번호가 틀렸습니다.");
+        }
+    } else {
+        //아이디가 다를 때
+        document.write("아이디가 일치하지 않습니다.");
+    }
+</script>
+````
+
 ## switch문
 + if...else문은 논리적 참, 거짓으로 실행할 코드 블록을 결정한다. 반면에 switch문은 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.
 + switch문은 주어진 표현식을 평가하여 그 값과 일치하는 표현식을 갖는 case문으로 실행 흐름을 옮긴다.
