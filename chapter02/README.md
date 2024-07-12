@@ -80,8 +80,16 @@
 
 ## 대입 연산자
 + 대입 연산자(=)는 연산된 데이터를 최종적으로 변수에 저장할 사용한다.
-> 복합 대입 연산자(+=, -=, *=, /=, %=)는 
-> 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말한다.
+````
+<script>
+    var num1 = 10;
+    var num2 = 3;
+</script>
+````
+
+## 복합 대입 연산자
++ 복합 대입 연산자(+=, -=, *=, /=, %=)는 
++ 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말한다.
 
 ````
 <script>
@@ -156,6 +164,45 @@
 | A === B  | A와 B는 같다(데이터 타입 비교) |
 | A !== B  | A와 B는 다르다(데이터 타입 비교) |
 
+````
+<script>
+    var a = 10, b = 20, c = 10, d = "20", result;
+
+    result = a == 10 // true
+    result = b === 20 // true
+
+    result = a > b; // false
+    result = a < b; // true
+    result = a <= b; //true
+
+    result = b == d; // 데이터 타입과 상관없이 데이터 값이 같으므로 true
+    result = b === d; // 데이터 타입이 다르므로 false (b는 number, d는 string) 
+
+    result = a != b; // 데이터 값이 다르므로 true
+</script>
+````
+
+## 논리 연산자
++ 논리 연산자에는 ||(or), &&(and), !(not)이 있다. 
++ 논리 연산자는 피연산자가 논리형 데이터인 true와 false로 결과를 반환한다.
+
+> + || - OR 연산자는 연산자 왼쪽과 오른쪽의 값이 모두 false이면 false, 한 쪽이라도 true이면 true 를 반환한다.
+> + && - AND 연산자는 연산자 왼쪽과 오른쪽의 값이 모두 true이면 true, 한 쪽이라도 false이면 false 를 반환한다.
+> + ! - NOT 연산자는 truthy 한 값이 들어오면 false를 반환하고, falsy 한 값이 들어오면 true 를 반환한다.
+
+### Truthy & Falsy
++ 자바스크립트에는 truthy와 falsy 라는 개념이 있다. 
++ 참/거짓을 판단하는 컨텍스트에서 truthy 한 값은 true로, falsy 한 값은 false로 판단된다.
+
+> falsy 로 판단되는 값은 다음과 같다.
+> + 0
+> + -0
+> + 0n
+> + ""
+> + null
+> + undefined
+> + NaN
+> falsy한 값을 제외한 모든 값은 truthy 이다.
 
 ## 연산자 우선순위
 + 학교 수학시간에 배웠듯이 사칙연산에서는 곱하기가 우선적으로 연산됩니다.
