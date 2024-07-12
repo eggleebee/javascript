@@ -27,7 +27,7 @@
     document.write(result, "<br>");
 
     result = x * y; // 곱하기
-    document.write(result. "<br>");
+    document.write(result, "<br>");
 
     result = x / y; // 나누기
     document.write(result, "<br>");
@@ -44,6 +44,25 @@
     console.log(num); // 처음에 변수에 저장된 1을 의미
     console.log(num++); // 처음에 변수에 저장된 1에 1을 더해라 라는 의미
     console.log(num); // 덧셈 결과를 확인
+</script>
+````
+
+## 문자 결합 연산자
++ 문자 결합 연산자는 연산 대상 데이터가 문자형이다. 
++ 여러개의 문자를 하나의 문자형 데이터로 결합할 때 사용한다.
+
+````
+<script>
+    var text1 = "큰 따옴표에 들어간 문자열입니다";
+    var text2 = '작은 따옴표에 들어간 문자열 입니다.';
+    var text3 = "순자가 '안녕하세요?' 라고 했습니다.";
+    var text4 = '철수가 "안녕하세요?" 라고 말했습니다.';
+    var text5 = "영자가 \"안녕하세요?\" 라고 말했습니다.";
+    var text6 = `광수가 "안녕하세요" 라고 말했습니다.`;
+    console.log(text1, text2, text3, text4, text5, text6);
+
+    var result = text3 + text4 + text5 + text6;
+    document.write(result);
 </script>
 ````
 

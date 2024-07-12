@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <h2>연산자</h2>
+    <h3>문자 결합 연산자</h3>
+
+    <script>
+        var text1 = "큰 따옴표에 들어간 문자열입니다";
+        var text2 = '작은 따옴표에 들어간 문자열 입니다.';
+        var text3 = "순자가 '안녕하세요?' 라고 했습니다.";
+        var text4 = '철수가 "안녕하세요?" 라고 말했습니다.';
+        var text5 = "영자가 \"안녕하세요?\" 라고 말했습니다.";
+        var text6 = `광수가 "안녕하세요" 라고 말했습니다.`;
+        console.log(text1, text2, text3, text4, text5, text6);
+
+        var result = text3 + text4 + text5 + text6;
+        document.write(result);
+    </script>
+</body>
+</html>
