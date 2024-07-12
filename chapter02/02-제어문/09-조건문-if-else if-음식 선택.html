@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>if, else if</h3>
+    <h4>음식 선택</h4>
+
+    <script>
+        var food = prompt("먹고싶은 음식을 입력하세요.[떡볶이, 돈까스, 피자, 치킨 중에 입력]");
+
+        // 떡볶이, 떡뽁이, 떡뽀끼 
+
+        if (food == "떡볶이" || food == "떡뽁이" || food == "떡뽀끼") {
+            document.write("오늘 점심은 떡볶이 입니다");
+        } else if (food == "돈까스") {
+            document.write("오늘 점심은 돈까~~스 입니다");
+        } else if (food == "피자") {
+            document.write("오늘 점심은 피자~~~입니다");
+        } else if (food == "치킨") {
+            document.write("오늘 점심은 치~~~킨~~~입니다");
+        } else {
+            document.write("메뉴를 다시 입력하세요.");
+        }
+    </script>
+</body>
+
+</html>

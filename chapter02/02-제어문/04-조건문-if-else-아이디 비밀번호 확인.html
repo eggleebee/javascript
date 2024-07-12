@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>if, else</h3>
+    <h4>아이디, 비밀번호 확인</h4>
+
+    <script>
+        var id = prompt("아이디를 입력하세요");
+        var pw = prompt("비밀번호를 입력하세요");
+
+        // 아이디가 핑크초코 이고 비밀번호가 1234일 때 
+        // 문서에 "환영합니다" 라고 출력
+        // false 일때는 
+        // 문서에 "아이디, 비밀번호를 확인하세요" 라고 출력
+
+        if (id == "핑크초코" && pw == "1234") {
+            document.write("환영합니다");
+        } else {
+            document.write("아이디, 비밀번호를 확인하세요");
+        }
+    </script>
+</body>
+
+</html>

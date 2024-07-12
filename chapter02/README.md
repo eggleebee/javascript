@@ -380,6 +380,24 @@
 
 ````
 <script>
+    var id = prompt("아이디를 입력하세요");
+    var pw = prompt("비밀번호를 입력하세요");
+
+    // 아이디가 핑크초코 이고 비밀번호가 1234일 때 
+    // 문서에 "환영합니다" 라고 출력
+    // false 일때는 
+    // 문서에 "아이디, 비밀번호를 확인하세요" 라고 출력
+
+    if (id == "핑크초코" && pw == "1234") {
+        document.write("환영합니다");
+    } else {
+        document.write("아이디, 비밀번호를 확인하세요");
+    }
+</script>
+````
+
+````
+<script>
     var age = 12;
     var charge;
 
@@ -449,6 +467,26 @@
         document.write("700원");
     } else {
         document.write("잘못된 단어 입력");
+    }
+</script>
+````
+
+````
+<script>
+    var food = prompt("먹고싶은 음식을 입력하세요.[떡볶이, 돈까스, 피자, 치킨 중에 입력]");
+
+    // 떡볶이, 떡뽁이, 떡뽀끼 
+
+    if (food == "떡볶이" || food == "떡뽁이" || food == "떡뽀끼") {
+        document.write("오늘 점심은 떡볶이 입니다");
+    } else if (food == "돈까스") {
+        document.write("오늘 점심은 돈까~~스 입니다");
+    } else if (food == "피자") {
+        document.write("오늘 점심은 피자~~~입니다");
+    } else if (food == "치킨") {
+        document.write("오늘 점심은 치~~~킨~~~입니다");
+    } else {
+        document.write("메뉴를 다시 입력하세요.");
     }
 </script>
 ````
@@ -791,6 +829,32 @@
 
             // 백틱, 템플릿 문자열, 템플릿 리터럴
             console.log(`${i} x ${j} = ${i * j}`)
+        }
+    }
+</script>
+````
+
+````
+ <script>
+    for (let i = 0; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("15의 배수 출력", i)
+        }
+    }
+
+    for (let i = 0; i < 50; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            console.log("3의 배수와  5의 배수 출력", i)
+        }
+    }
+</script>
+````
+
+````
+ <script>
+    for (let i = 0; i < 50; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            console.log("3의 배수와  5의 배수 출력", i)
         }
     }
 </script>
