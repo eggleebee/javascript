@@ -63,6 +63,18 @@
 
     var result = text3 + text4 + text5 + text6;
     document.write(result);
+
+    var age = 25;
+    var userName = "홍길동";
+
+    document.write("<hr>");
+    document.write("제 이름은 " + userName + "이고" + "<br>" + "나이는 " + age + "세 입니다.");
+
+    document.write("<hr>");
+    document.write("제 이름은 " , userName , "이고" , "<br>" , "나이는 " , age , "세 입니다");
+
+    document.write("<hr>");
+    document.write(`제이름은 ${userName}`)
 </script>
 ````
 
@@ -123,6 +135,34 @@
 > 복합 대입 연산자(+=, -=, *=, /=, %=)는 
 > 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말한다.
 
+````
+<script>
+    var num1 = 10;
+    var num2 = 3;
+
+    num1 += num2;  //num1 = num1 + num2;
+    document.write(num1, "<br>");
+
+    num1 -= num2;  //num1 = num1 - num2;
+    document.write(num1, "<br>");
+
+    num1 *= num2; //num1 = num1 * num2;
+    document.write(num1, "<br>");
+
+    num1 %= num2; //num1 = num1 % num2;
+    document.write(num1, "<br>");
+
+    // HTML 태그들을 복합 대입 연산자를 이용하여 하나의 문자로 결합하려면 아래처럼 할 수 있다.
+    var t = "<table border='1'>";
+
+    t += "<tr>";
+    t += "<td>첫번째 칸</td><td>두번째 칸</td><td>세번째 칸</td>";
+    t += "<tr>";
+    t += "</table>";
+
+    document.write(t);
+</script>
+````
 
 
 # 02-제어문
