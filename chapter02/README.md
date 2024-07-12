@@ -439,31 +439,17 @@
 
 ````
 <script>
-    const engDay = 'friday';
-    let korDay;
+    let drink = prompt("가격 조회를 원하는 음료수를 입력하세요.( 콜라, 사이다, 커피 中 택1)", "");
 
-    switch (engDay) {
-        case 'monday':
-            korDay = '월요일';
-            break;
-        case 'tuesday':
-            korDay = '화요일';
-            break;
-        case 'wednesday':
-            korDay = '수요일';
-            break;
-        case 'thursday':
-            korDay = '목요일';
-            break;
-        case 'friday':
-            korDay = '금요일';
-            break;
-        default:
-            korDay = '주말';
-            break;
+    if (drink = "콜라") {
+        document.write("800원");
+    } else if (drink = "사이다") {
+        document.write("900원");
+    } else if (drink = "커피") {
+        document.write("700원");
+    } else {
+        document.write("잘못된 단어 입력");
     }
-
-    console.log(korDay)
 </script>
 ````
 
