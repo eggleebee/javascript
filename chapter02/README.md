@@ -608,7 +608,7 @@
 
 ````
 <script>
-    let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19', 17 )
+    let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19')
 
     switch( parseInt(age) ){
         case 17 : 
