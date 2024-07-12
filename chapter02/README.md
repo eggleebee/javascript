@@ -34,7 +34,11 @@
 
     result = x % y; // 나머지
     document.write(result);
+</script>
+````
 
+````
+<script>
     var num = 1;
     console.log("num++ 한 경우");
     console.log(num); // 처음에 변수에 저장된 1을 의미
