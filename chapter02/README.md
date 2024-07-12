@@ -380,8 +380,6 @@
 
 ````
 <script>
-    // if문 여러개 따로따로
-    // if - if 로 사용하게 되면 각각 다른 조건 문으로 해석되어 각각 수행하게 됨
     var age = 12;
     var charge;
 
@@ -406,6 +404,9 @@
 
 ````
 <script>
+    // 한 묶음으로 하고 싶다면
+    // 하나의 상황에 대한 조건이 여러개로 나뉘고 각 조건에 다른 수행이 이루어져야 할 경우 사용
+    // if- else if 를 사용하는 경우 하나의 조건이 만족 되면 나머지 else if 부분은 수행되지 않음
     if (false) {
         console.log('안녕하세요')
     } else if (true) {
@@ -415,10 +416,11 @@
     } else {
         console.log('잘가~~~')
     }
+</script>
+````
 
-    // 한 묶음으로 하고 싶다면
-    // 하나의 상황에 대한 조건이 여러개로 나뉘고 각 조건에 다른 수행이 이루어져야 할 경우 사용
-    // if- else if 를 사용하는 경우 하나의 조건이 만족 되면 나머지 else if 부분은 수행되지 않음
+````
+<script>
     const score = 96;
 
     if (score >= 90) {
@@ -437,6 +439,36 @@
 
 ````
 <script>
+    const engDay = 'friday';
+    let korDay;
+
+    switch (engDay) {
+        case 'monday':
+            korDay = '월요일';
+            break;
+        case 'tuesday':
+            korDay = '화요일';
+            break;
+        case 'wednesday':
+            korDay = '수요일';
+            break;
+        case 'thursday':
+            korDay = '목요일';
+            break;
+        case 'friday':
+            korDay = '금요일';
+            break;
+        default:
+            korDay = '주말';
+            break;
+    }
+
+    console.log(korDay)
+</script>
+````
+
+````
+<script>
     // 코드 블록 내의 문이 하나라면 중괄호를 생략
     var num = 2;
     var kind;
@@ -448,6 +480,7 @@
 ````
 
 ## switch문
++ if...else문은 논리적 참, 거짓으로 실행할 코드 블록을 결정한다. 반면에 switch문은 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.
 + switch문은 주어진 표현식을 평가하여 그 값과 일치하는 표현식을 갖는 case문으로 실행 흐름을 옮긴다.
 + case문은 상황을 의미하는 표현식을 지정하고 콜론으로 마친다. 
 + 그리고 그 뒤에 실행할 문들을 위치시킨다.
@@ -456,7 +489,9 @@
 + case문에 해당하는 문의 마지막에 break문을 사용하지 않는다면 문을 실행한 후 switch문을 탈출하지 않고 switch문이 끝날 때까지 이후의 모든 case문과 default문을 실행하게 된다. 이를 폴 스루라고 말한다.
 + default문에는 break문을 생략하는 것이 일반적이다. default문은 switch문의 맨 마지막에 위치하므로 default문의 실행이 종료되면 switch문을 빠져나가기 때문이다.
 
-> if...else문은 논리적 참, 거짓으로 실행할 코드 블록을 결정한다. 반면에 switch문은 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.
+### break문의 역할과 이유
+> break는 switch의 중괄호를 빠져나가는 명령어다.
+> witch조건문은 break문을 만나기 전까지 조건값들을 비교하여 case문 혹은 default문을 실행한다. 
 
 ````
 <script>
