@@ -281,7 +281,7 @@
     const result3 = numbers.filter(number => number % 2 === 0)
     console.log(result3) // 2,4,8,10
 
-    // 배열에서 특정 조건을 만족하는 요소를 찾아 첫 번째 요소를 반환하는 함수
+    // 조건을 만족하는 요소로만 새로운 배열을 만들고 싶을 때
     const result4 = numbers.find(number => number % 2 === 0)
     console.log(result4) // 2
 </script>
@@ -295,7 +295,7 @@
     // find + 화살표 함수
     const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
 
-    // 배열에서 특정 조건을 만족하는 요소를 찾아 첫 번째 요소를 반환하는 함수
+    // 배열에서 찾은 첫 번째 요소의 값이 필요할 때
     const result = numbers.find(number => number % 2 === 0)
     console.log(result) // 2
 </script>
@@ -343,6 +343,57 @@
     document.write(number)
 </script>
 ````
+
+## 배열을 문자열로 join() 함수
++ 배열을 문자열로 바꿀 때 join() 함수를 사용
++ join() 함수는 배열의 모든 요소를 연결해 하나의 문자열로 만든다.
++ 구분자를 넣어주게 되면 문자열로 바뀔때 사이사이에 지정한 구분자가 들어간다.
+
+````
+<script>
+    const arr = ["사과", "포도"]; 
+
+    console.log('과일갯수', arr.length);
+    const count = arr.length
+    console.log('과일갯수 count변수 값 출력', count);
+
+    const fruits = arr.join(" , ")
+
+    // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
+    for ( let i = 0; i < fruits.length; i++ ) { /
+        document.write(fruits[i]); 
+    } 
+</script>
+````
+
+## 배열의 주요 메서드
+### 요소를 더하거나 지우는 메서드
+> + push() : 배열의 맨 뒤에 요소를 하나 추가
+> + pop() : 배열의 맨 뒤에 요소를 하나 제거
+> + unshift() : 배열의 맨 앞에 요소를 하나 추가
+> + shift() : 배열의 맨 앞에 요소를 하나 제거
+> + splice() : 배열 자체를 수정하며, 임의의 위치에 요소를 추가하거나 제거하는 메서드이다.
+
+## 배열 변형
+> + slice(startIndex, endIndex) : 배열의 사본을 반환하며, 배열의 일부을 지정해서 가져올 때 사용
+> + join() : 배열의 사본을 반환하며, 배열의 모든 요소를 연결해 하나의 문자열로 만든다. 배열 데이터 사이에 원하는 문자열을 넣어 구분자로 사용.
+> + contact() : 배열의 사본을 반환하며, 배열의 끝에 여러 요소를 추가 배열을 합침
+
+### 원하는 요소 찾기 메서드
+> + indexOF(item,pos) : 찾고자 하는 값과 정확히 일치(===) 하는 요소의 첫 번째 인덱스를 반환
+> + lastIndexOf(item,pos) : 마지막 인덱스를 반환
+> + findIndex() : 배열에서 찾은 요소의 인덱스 값이 필요할 때, 일치하는 것을 찾지 못했을 때 -1을 반환. 보조 함수를 써서 검색 조건을 지정할 수 있다.
+> + find() : 배열에서 찾은 첫 번째 요소의 값이 필요할 때, 조건에 맞는 요소의 인덱스가 아니라 요소 자체를 원할 때
+> + filter() : 조건을 만족하는 요소로만 새로운 배열을 만들고 싶을 때
+> + includes(value) : 배열에 특정 요소가 포함하는지 확인하는 함수
+
+### 배열 정렬
+> + reverse(): 배열 요소의 순서를 반대로 바꿈
+> + sort(): 배열 요소의 순서를 정렬
+
+### 데이터 순회
+> + map(): 모든 배열 데이터마다 반복 처리가 필요한 경우 사용.
+> + reduce(): 모든 데이터를 순화하면서 누적 연산이 필요한 경우 사용.
 
 ## 문자열 반복문
 > + for문 이용
@@ -409,69 +460,5 @@
     });
 </script>
 ````
-
-## 배열을 문자열로 join() 함수
-+ 배열을 문자열로 바꿀 때 join() 함수를 사용
-+ join() 함수는 배열의 모든 요소를 연결해 하나의 문자열로 만든다.
-+ 구분자를 넣어주게 되면 문자열로 바뀔때 사이사이에 지정한 구분자가 들어간다.
-
-````
-<script>
-    const arr = ["사과", "포도"]; 
-
-    console.log('과일갯수', arr.length);
-    const count = arr.length
-    console.log('과일갯수 count변수 값 출력', count);
-
-    const fruits = arr.join(" , ")
-
-    // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
-    for ( let i = 0; i < fruits.length; i++ ) { /
-        document.write(fruits[i]); 
-    } 
-</script>
-````
-
-## 배열의 주요 메서드
-### 요소를 더하거나 지우는 메서드
-> + push
-> + pop
-> + shift
-> + unshift
-> + splice
-> + slice( startIndex, endIndex)
-> + contact
-
-### 원하는 요소 찾기 메서드
-> + indexOF/lastIndexOf(item,pos)
-> + includes(value)
-> + find/filter(func) - func의 반환 값을 true로 만드는 첫 번째/정체 요소를 반환함
-> + findIndex
-
-
-### 배열 변형하기
-> + map(func)
-> + sort(func)
-> + reverse()
-> + split/jion
-> + reduce
-
-### 데이터 변경
-> + push(): 배열의 끝에 값을 추가.
-> + pop(): 배열 마지막 값을 제거.
-> + shift(): 배열 데이터를 왼쪽으로 하나씩 밀어 맨앞 값을 제거.
-> + splice(): 배열값을 추가하거나 제거해서 반환.
-> + reverse(): 배열을 역순으로 재배치.
-> + sort(): 배열 데이터를 정렬
-
-## 배열의 일부를 반환
-> + concat(): 두개의 배열을 합침.
-> + join(): 배열 데이터 사이에 원하는 문자열을 넣어 구분자로 사용.
-> + slice(): 배열의 일부을 지정해서 가져옴.
-
-### 데이터 순회
-> + map(): 모든 배열 데이터마다 반복 처리가 필요한 경우 사용.
-> + filter(): 특정 조건을 만족하는 데이터만 처리할 경우 사용.
-> + reduce(): 모든 데이터를 순화하면서 누적 연산이 필요한 경우 사용.
 
 # 02-함수
