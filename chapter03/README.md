@@ -10,7 +10,7 @@
 + 배열 리터럴 **대괄호[요소, 요소, 요소, … , 요소]** 를 사용하여 만드는 방법
 + **Array() 생성자 함수**로 배열을 생성하는 방법
 
-### 배열 리터럴 **대괄호[요소, 요소, 요소, … , 요소]** 로 배열 생성
+## 배열 리터럴 대괄호[요소, 요소, 요소, … , 요소] 로 배열 생성
 
 ````
 <script>
@@ -27,7 +27,7 @@
 </script>
 ````
 
-###  **Array() 생성자 함수**로 배열을 생성
+## Array() 생성자 함수로 배열 생성
 
 ````
 <script>
@@ -121,10 +121,9 @@
 </script>
 ````
 
-## 배열의 반복문
+## 배열의 반복문 for
 반복문을 이용하여 배열안의 값들을 하나씩 돌면서 전부 출력할 수 있다.
 
-### for
 ````
 <script>
     // 기본구조
@@ -147,29 +146,7 @@
 </script>
 ````
 
-### 배열을 문자열로-join() 함수
-+ 배열을 문자열로 바꿀 때 join() 함수를 사용
-+ join() 함수는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
-+ 구분자를 넣어주게 되면 문자열로 바뀔때 사이사이에 지정한 구분자가 들어간다.
-
-````
-<script>
-    const arr = ["사과", "포도"]; 
-
-    console.log('과일갯수', arr.length);
-    const count = arr.length
-    console.log('과일갯수 count변수 값 출력', count);
-
-    const fruits = arr.join(" , ")
-
-    // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
-    for ( let i = 0; i < fruits.length; i++ ) { /
-        document.write(fruits[i]); 
-    } 
-</script>
-````
-
-### for of
+## 배열의 반복문 for of
 
 ````
  <script>
@@ -195,7 +172,49 @@
 </script>
 ````
 
-## 문자열과 반복문 for와 for of
+## 배열의 반복문 forEach
+
+````
+<script>
+    const animals = ['사자', '호랑이', '원숭이'];
+
+    animals.forEach(function (animal) {
+        console.log('animal 출력', animal)
+    })
+
+    animals.forEach(function (animal, index) {
+        console.log('인덱스 번호', index, '동물', animal)
+    })
+
+    // 화살표 함수
+    animals.forEach((animal) => {
+        console.log('화살표 함수 사용 animal 출력', animal)
+    });
+
+    // 화살표 함수 (소괄호 생략)
+    animals.forEach(animal => {
+        console.log(animal)
+    });
+</script>
+````
+
+### for문을 이용해서 배열에 요소 추가-push() 함수
+
+````
+<script>
+    const number = [];
+    // 빈 배열 'number' 선언
+    // 반복문 for문을 사용해서 n을 1로 초기화하고, n이 9 이하일 때까지 반복한다.
+    
+    for (let n = 1; n <= 9; n += 1) {
+        number.push(n + 1); // number에 n+1 값을 추가하고, push() 메서드를 사용해서 배열의 끝에 새로운 요소를 추가한다.
+    }
+
+    document.write(number)
+</script>
+````
+
+## 문자열과 반복문 for와 for...of
 
 ````
 <script>
@@ -217,6 +236,28 @@
     for (let value of iterable) {
         console.log("for ... of 사용", value);
     }
+</script>
+````
+
+### 배열을 문자열로 join() 함수
++ 배열을 문자열로 바꿀 때 join() 함수를 사용
++ join() 함수는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
++ 구분자를 넣어주게 되면 문자열로 바뀔때 사이사이에 지정한 구분자가 들어간다.
+
+````
+<script>
+    const arr = ["사과", "포도"]; 
+
+    console.log('과일갯수', arr.length);
+    const count = arr.length
+    console.log('과일갯수 count변수 값 출력', count);
+
+    const fruits = arr.join(" , ")
+
+    // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
+    for ( let i = 0; i < fruits.length; i++ ) { /
+        document.write(fruits[i]); 
+    } 
 </script>
 ````
 

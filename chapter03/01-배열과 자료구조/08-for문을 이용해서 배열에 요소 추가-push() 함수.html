@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>for문을 이용해서 배열에 요소 추가-push() 함수</h3>
+
+    <script>
+        const number = [];
+        // 빈 배열 'number' 선언
+        // 반복문 for문을 사용해서 n을 1로 초기화하고, n이 9 이하일 때까지 반복한다.
+        
+        for (let n = 1; n <= 9; n += 1) {
+            number.push(n + 1); // number에 n+1 값을 추가하고, push() 메서드를 사용해서 배열의 끝에 새로운 요소를 추가한다.
+        }
+
+        document.write(number)
+    </script>
+</body>
+
+</html>
