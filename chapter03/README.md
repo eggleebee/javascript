@@ -147,8 +147,9 @@
 </script>
 ````
 
-### 배열을 문자열로-join() 함수 구분자 넣기
-+ 배열을 문자렬로 바꿀 때 join() 함수를 사용
+### 배열을 문자열로-join() 함수
++ 배열을 문자열로 바꿀 때 join() 함수를 사용
++ join() 함수는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
 + 구분자를 넣어주게 되면 문자열로 바뀔때 사이사이에 지정한 구분자가 들어간다.
 
 ````
@@ -194,8 +195,7 @@
 </script>
 ````
 
-## 문자열 반복문
-### 문자열(String)-for, for...of 반복문
+## 문자열과 반복문 for와 for of
 
 ````
 <script>
@@ -220,13 +220,12 @@
 </script>
 ````
 
-### 문자열(String)-forEach 반복문
-
+### 문자열을 배열로-전개구문과 splict()함수 + 반복문 forEach
++ 문자열을 반복문 돌리고 싶을 경우 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다.
++ 문자열을 배열로 변환,spread operator(전개 구문)을 사용
 ````
  <script>
-    // 문자열을 반복문 돌리고 싶을 경우
-    // 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다
-    // 문자열을 배열로 변환,spread operator(전개 구문)을 사용
+    // 전개구문
     const str = "문자열을 배열로 변환하기";
     const arr = [...str];
     console.log("배열인가?", Array.isArray(arr));
@@ -237,6 +236,8 @@
     // [...str].forEach(strArr => console.log(strArr));
 
     const sentence = "문자열을,배열로,변환후,forEach,함수를,사용";
+
+    // split() 함수 : 문자열을 특정 구분자로 나누어 배열로 만든다.
     const words = sentence.split(",");
 
     [...words].forEach(function(wordsArr, index){
