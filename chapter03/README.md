@@ -78,8 +78,7 @@
 </script>
 ````
 
-## 배열 요소 개수 확인하기
-+ **배열.length**
+## 배열 요소 개수 length
 + 배열 내부에 들어 있는 요소의 개수를 확인할 때는 배열의 **length** 속성을 사용한다. 
 + 배열 뒤에 점(.)을 찍고 length라고 입력해주면 된다.
 + 또한, length 속성 값을 직접 설정하여, 배열의 길이를 조정할 수도 있다.
@@ -95,29 +94,22 @@
 
     // 반복문을 이용하여 배열의 갯수만큼 모든 요소를 출력
     for (let i = 0; i < array.length; i++) {
-        console.log(array[i]) // 값이 할당되지 않아서 undefined 4번 출력
+        document.write(array[i], ' , ') // 값이 할당되지 않아서 undefined 4번 출력
     }
+</script>
+````
 
-    // 배열의 크기를 임의로 변경
+## 배열의 크기 변경
+````
+<script>
+    // 배열 크기 5개 지정
+    const array = [, , , ,]
+
+    // 배열의 크기를 2개로 변경
     // length 속성 값을 직접 설정하여, 배열의 길이를 조정할 수도 있습니다.
     array.length = 2;
     console.log(array.length)
     console.log(array) // [비어 있음 × 2]
-
-    // 새로운 배열을 추가하면 크기는 자동으로 변경 
-    array[5] = 'apple';
-    console.log(array.length)
-    console.log(array) // [비어 있음 × 5]
-
-    // 새로운 배열 추가로 크기 변경
-    array.push('banana');
-    console.log(array.length)
-    console.log(array) // [비어 있음 × 5, 'apple', 'banana']
-
-    // 반복문을 이용하여 배열의 모든 요소를 화면에 출력
-    for (let i = 0; i < array.length; i++) {
-        document.write(array[i], "<br>");
-    }
 </script>
 ````
 
@@ -130,12 +122,17 @@
     // for (조건) {실행문}
 
     const food = ['피자','콜라','치킨']
+      
+    // 배열 요소 개수 확인하기 : 배열.length
+    // 배열 요소에 접근하기 : 배열[인덱스]
+
     console.log('음식 갯수', food.length) // 3
     console.log('음식 전체 출력', food)
     console.log('food[0] 출력', food[0])// 피자
     console.log('food[1] 출력', food[1])// 콜라
     console.log('food[2] 출력', food[2])// 치킨
 
+    // 반복문을 이용하여 배열의 갯수만큼 모든 요소를 출력
     // 반복문으로 음식 갯수만큼 과일이름을 화면에 출력
     // i가 arr.length까지 i++(계속 더하며) 반복된다.
     // food[i] 번째 객체를 반복하여 콘솔출력
@@ -198,7 +195,36 @@
 </script>
 ````
 
+## 자바스크립트 배열 추가, 삭제 함수
+> + 배열 추가 : Array.push(), Array.unshift(), Array.splice()
+> + 배열 삭제 : Array.pop(), Array.shift(), Array.splice()
+
+## 배열에 요소추가 push() 함수
+````
+<script>
+    // 배열 크기 5개 지정
+    const array = [, , , ,]
+    
+    // 새로운 배열을 추가하면 크기는 자동으로 변경 
+    array[5] = 'apple';
+    console.log(array.length)
+    console.log(array) // [비어 있음 × 5]
+
+    // 새로운 배열 추가로 크기 변경
+    array.push('banana');
+    console.log(array.length)
+    console.log(array) // [비어 있음 × 5, 'apple', 'banana']
+
+    // 반복문을 이용하여 배열의 모든 요소를 화면에 출력
+    for (let i = 0; i < array.length; i++) {
+        document.write(array[i], "<br>");
+    }
+</script>
+````
+
 ## for문을 이용해서 배열에 요소 추가 push() 함수
++ push 메서드는 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 증가시킨다.
+
 
 ````
 <script>
@@ -262,8 +288,9 @@
 ````
 
 ## 문자열을 배열로 전개구문과 split()함수 + 반복문 forEach
++ string.split(separator, limit) 함수:  문자열을 'separator'로 잘라서, 'limit' 크기 이하의 배열에 잘라진 문자열을 저장하여 리턴한다.
 + 문자열을 반복문 돌리고 싶을 경우 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다.
-+ 문자열을 배열로 변환,spread operator(전개 구문)을 사용
++ 문자열을 배열로 변환, spread operator(전개 구문)을 사용
 ````
  <script>
     // 전개구문
@@ -286,9 +313,6 @@
     });
 </script>
 ````
-## for in
-
-
 
 ## map
 
