@@ -218,6 +218,8 @@
 ````
 
 ## map과 화살표 함수
++ map() 은 어떤 배열을 다른 형태의 배열로 재생산할때 사용하는 반복문이다. 
++ 배열의 각 요소들에게 일괄적으로 함수를 적용하고 싶을 때 사용한다.
 + 배열의 각 원소별로 지정된 함수를 실행한 결과로 구성된 새로운 배열을 반환한다.
 
 ````
@@ -245,16 +247,28 @@
 ````
 
 ## filter와 화살표 함수
-+ 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다.
++ filter() 는 배열에 사용하며, 주어진 함수를 만족하는 모든 요소를 모아 새 배열로 반환한다.
++ 즉 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다.
+> + element - 배열의 현재 요소
+> + index(Optional) - 배열의 현재 요소의 인덱스
+> + array(Optional) - 호출한 배열
+
 ````
 <script>
     // filter + 화살표 함수
-    const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+    let array = [3, 5, 11, 0, 9, 'string'];
+
+    // 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환
+    // 새로운 배열 을 담아줄 result 변수
+    let result = array.filter((value) => value < 10)
+    console.log(result); // array [3, 5, 0, 9]
     
-    const result1 = numbers.filter((number) => { // 새로운 배열 을 담아줄 result 변수
+    const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+
+    const result1 = numbers.filter((number) => { 
         return number > 4;
-        //return 뒤로 작성되는 문장은 실행되지 않음 
-        //반복문의 break문과 비슷하게 코드가 강제 종료
+        // return 뒤로 작성되는 문장은 실행되지 않음 
+        // 반복문의 break문과 비슷하게 코드가 강제 종료
     })
     console.log(result1) // 5,6,7,8,9,10
 
@@ -264,11 +278,26 @@
     const result2 = numbers.filter(number => number < 4)
     console.log(result2) // 1,2,3
 
-    const result3 = numbers.find(number => number % 2 === 0)
-    console.log(result3)
+    const result3 = numbers.filter(number => number % 2 === 0)
+    console.log(result3) // 2,4,8,10
 
-    const result4 = numbers.filter(number => number % 2 === 0)
-    console.log(result4)
+    // 배열에서 특정 조건을 만족하는 요소를 찾아 첫 번째 요소를 반환하는 함수
+    const result4 = numbers.find(number => number % 2 === 0)
+    console.log(result4) // 2
+</script>
+````
+
+## find와 화살표 함수
++ 배열에서 특정 조건을 만족하는 요소를 찾아 첫 번째 요소를 반환하는 함수이다.
+
+````
+ <script>
+    // find + 화살표 함수
+    const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+
+    // 배열에서 특정 조건을 만족하는 요소를 찾아 첫 번째 요소를 반환하는 함수
+    const result = numbers.find(number => number % 2 === 0)
+    console.log(result) // 2
 </script>
 ````
 
