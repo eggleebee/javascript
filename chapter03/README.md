@@ -384,33 +384,28 @@
 </script>
 ````
 
-## map
-
 ## 배열의 주요 메서드
 ### 요소를 더하거나 지우는 메서드
-push
-pop
-shift
-unshift
-splice
-splice
-contact
+> + push
+> + pop
+> + shift
+> + unshift
+> + splice
+> + contact
 
 ### 원하는 요소 찾기 메서드
-indexOF/lastIndexOf(item,pos)
-includes(value)
-find/filter(func) - func의 반환 값을 true로 만드는 첫 번째/정체 요소를 반환함
-findIndex
+> + indexOF/lastIndexOf(item,pos)
+> + includes(value)
+> + find/filter(func) - func의 반환 값을 true로 만드는 첫 번째/정체 요소를 반환함
+> + findIndex
 
-### 배열전체순회하기
-forEACH(func) 모든 요소에 func를 호출함. 결과는 반환되지 않음
 
 ### 배열 변형하기
-map(func)
-sort(func)
-reverse()
-split/jion
-reduce
+> + map(func)
+> + sort(func)
+> + reverse()
+> + split/jion
+> + reduce
 
 ### 데이터 변경
 > + push(): 배열의 끝에 값을 추가.
