@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>map과 화살표 함수</h3>
+
+    <script>
+        // map + 화살표함수
+        const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+        console.log(numbers)
+        console.log('배열의 길이', numbers.length)
+
+        numbers.map(number => {
+            console.log('숫자 출력', number)
+            console.log('number * 2 결과 출력', number * 2)
+        });
+
+        // map함수는 return 반환이 가능함
+        // return이 포함되면 배열의 각 요소에 실행하고 
+        // 실행결과를 모은 새로운 배열을 리턴한다.
+        const doubleNumbers = numbers.map(number => {
+            return number * 2;
+        });
+
+        console.log(numbers) // 원본 배열
+        console.log(doubleNumbers) // 새로운 배열로 리턴 받았다. 
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 <body>
     <h1>JavaScript</h1>
     <h2>배열과 자료구조</h2>
-    <h3>배열의 반복문 forEach</h3>
+    <h3>배열의 반복문 forEach와 화살표 함수</h3>
 
     <script>
         const animals = ['사자', '호랑이', '원숭이'];
@@ -24,14 +24,22 @@
             console.log('인덱스 번호', index, '동물', animal)
         })
 
-        // 화살표 함수
+        // forEach + 화살표함수
         animals.forEach((animal) => {
             console.log('화살표 함수 사용 animal 출력', animal)
         });
 
-        // 화살표 함수 (소괄호 생략)
+        // forEach + 화살표함수 (소괄호 생략)
         animals.forEach(animal => {
             console.log(animal)
+        });
+
+        // forEach + 화살표함수
+        const nums = [10 , 20 , 30 , 40]
+        console.log(nums)
+
+        nums.forEach(num => {
+            console.log( num + 100 )
         });
     </script>
 </body>

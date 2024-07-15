@@ -14,6 +14,16 @@
 
 ````
 <script>
+    const city1 = '서울';
+    const city2 = '대전';
+    const city3 = '대구';
+    const city4 = '부산';
+
+    console.log(city1, city2, city3, city4)
+
+    const cities = ['Seoul', 'New York', 'Paris'];
+    console.log(cities)
+
     // 빈 배열
     const nums = []
     nums[0] = 100
@@ -169,7 +179,7 @@
 </script>
 ````
 
-## 배열의 반복문 forEach
+## 배열의 반복문 forEach와 화살표 함수
 
 ````
 <script>
@@ -183,15 +193,75 @@
         console.log('인덱스 번호', index, '동물', animal)
     })
 
-    // 화살표 함수
+    // forEach + 화살표함수
     animals.forEach((animal) => {
         console.log('화살표 함수 사용 animal 출력', animal)
     });
 
-    // 화살표 함수 (소괄호 생략)
+    // forEach + 화살표함수 (소괄호 생략)
     animals.forEach(animal => {
         console.log(animal)
     });
+
+    // forEach + 화살표함수
+    const nums = [10 , 20 , 30 , 40]
+    console.log(nums)
+
+    nums.forEach(num => {
+        console.log( num + 100 )
+    });
+</script>
+````
+
+## map과 화살표 함수
+
+````
+<script>
+    // map + 화살표함수
+    const numbers = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+    console.log(numbers)
+    console.log('배열의 길이', numbers.length)
+
+    numbers.map(number => {
+        console.log('숫자 출력', number)
+        console.log('number * 2 결과 출력', number * 2)
+    });
+
+    // map함수는 return 반환이 가능함
+    // return이 포함되면 배열의 각 요소에 실행하고 
+    // 실행결과를 모은 새로운 배열을 리턴한다.
+    const doubleNumbers = numbers.map(number => {
+        return number * 2;
+    });
+
+    console.log(numbers) // 원본 배열
+    console.log(doubleNumbers) // 새로운 배열로 리턴 받았다. 
+</script>
+````
+
+## filter와 화살표 함수
+````
+<script>
+    // filter + 화살표 함수
+    // 새로운 배열 을 담아줄 result 변수
+    const result1 = numbers.filter((number) => {
+        return number > 4;
+        //return 뒤로 작성되는 문장은 실행되지 않음 
+        //반복문의 break문과 비슷하게 코드가 강제 종료
+    })
+    console.log(result1) // 5,6,7,8,9,10
+
+    // 축약작성
+    // 매개변수 소괄호 생략 가능
+    // 리턴문이 하나일 경우 {중괄호} 와 return키워드 생략가능
+    const result2 = numbers.filter(number => number < 4)
+    console.log(result2) // 1,2,3
+
+    const result3 = numbers.find(number => number % 2 === 0)
+    console.log(result3)
+
+    const result4 = numbers.filter(number => number % 2 === 0)
+    console.log(result4)
 </script>
 ````
 
