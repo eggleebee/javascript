@@ -730,19 +730,41 @@
         sum = sum + i;
     }
 </script>
+````
+````
+<script>
+    for (let i = 0; i < 50; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            console.log("3의 배수와  5의 배수 출력", i)
+        }
+    }
+</script>
+````
+````
+<script>
+    for (let i = 0; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("15의 배수 출력", i)
+        }
+    }
+</script>
+````
+
 ## break문 
 > + 반복문(for, for...in, for...of, while, do...while) 또는 switch문의 코드 블록을 탈출한다.
 > + 중첩된 for문의 내부 for문에서 break문을 실행하면 내부 for문을 탈출하여 외부 for문으로 진입한다.
 
 ````
 <script>
-    // break : 반복문 탈출
+    // continue : 다음 루프로 넘어간다
     for (let i = 0; i < 10; i++) {
         if (i == 5) {
-            break;
+            continue;
+            // 아래쪽 문장 실행하지 않고 for문의 조건식으로 돌려보냄  
+            // 예외를 만들때 사용
         }
         console.log(i)
-    } 
+    }
 </script>
 ````
 
@@ -751,13 +773,55 @@
 
 ````
 <script>
-    // continue : 다음 루프로 넘어간다
+    // break : 반복문 탈출
     for (let i = 0; i < 10; i++) {
         if (i == 5) {
-            continue;
+            break; // 반복문이 종료됨
         }
         console.log(i)
+    } 
+</script>
+````
+
+````
+<script>
+    let x = 6;
+    console.log(x % 3 == 0); // 3의 배수
+
+    // 1부터 10까지 1씩 증가 반복문
+    for (let i = 1; i <= 10; i++) {
+        if (i % 3 == 0) { //i값이 3의 배수 일 경우
+            document.write("3의 배수 출력 ", i, "<br>");
+        }
     }
+
+    // 1부터 10까지 1씩 증가 반복문
+    // 홀수만 뽑아 출력
+    for (let i = 1; i <= 10; i++) {
+        if (i % 2 == 0) { // i를 2로 나눈 나머지가 0 이라는 것은 짝수일 때를 의미함
+            continue; // 짝수를 제외
+        }
+        document.write("짝수 제외 3의 배수 출력 ", i, "<br>");
+    }
+</script>
+````
+
+````
+<script>
+    let sum = 0, // 합산을 위한 변수선언
+        i; // i변수를 선언했으나 초기값을 할당하지 않은상태
+
+    for (i = 1; i <= 10; i++) {// 1~10까지
+        if (i % 2 == 0) { // 2로 나눈 나머지가 0이라는 것=> 짝수일 때를 의미함
+            console.log(i)
+            continue;// 짝수제외한 홀수만 출력
+        }
+        document.write(i); // for문 돌면서 하나씩 출력 1,2,3,4,5,6,7,8,9,10
+        sum += i;//for문 돌면서 하나씩 받은 숫자를 합산한다
+    }
+
+    //for문을 다 돌고 난 후 합산 출력
+    document.write("합산된 값은 ", sum)
 </script>
 ````
 
