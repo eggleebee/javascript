@@ -178,7 +178,7 @@
 ````
 
 ## 문자열 반복문
-### 문자열(String)-for-for of 반복문
+### 문자열(String)-for, for...of 반복문
 
 ````
 <script>
