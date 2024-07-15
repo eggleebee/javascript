@@ -349,7 +349,7 @@
 </script>
 ````
 
-## 문자열을 배열로 전개구문과 split()함수 + 반복문 forEach
+## 문자열을 배열로 split() 함수
 + string.split(separator, limit) 함수:  문자열을 'separator'로 잘라서, 'limit' 크기 이하의 배열에 잘라진 문자열을 저장하여 리턴한다.
 + 문자열을 반복문 돌리고 싶을 경우 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다.
 + 문자열을 배열로 변환, spread operator(전개 구문)을 사용
