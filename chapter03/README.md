@@ -315,7 +315,10 @@
 </script>
 ````
 
-## 문자열과 반복문 for와 for...of
+## 문자열 반복문
+> + for문 이용
+> + split후에 map이나 forEach이용
+> + for ... of 사용
 
 ````
 <script>
@@ -323,20 +326,53 @@
 
     // for 사용
     for (let i = 0; i < str.length; i++) {
-        let txt = str[i]
-        console.log("for 사용", txt)
+        let value = str[i]
+        console.log("for 사용", value)
+    }
+
+    // forEach(혹은 map)사용
+    str.split('').forEach(value => {
+        console.log("forEach 사용" , value);
+    })
+
+    // for ... of 사용
+    for (let value of str) {
+        console.log("for ... of 사용", value);
     }
 
     // for ... of 사용
-    for (let txt of str) {
-        console.log("for ... of 사용", txt);
-    }
-
     let iterable = "안녕하세요";
 
     for (let value of iterable) {
         console.log("for ... of 사용", value);
     }
+</script>
+````
+
+## 문자열을 배열로 전개구문과 split()함수 + 반복문 forEach
++ string.split(separator, limit) 함수:  문자열을 'separator'로 잘라서, 'limit' 크기 이하의 배열에 잘라진 문자열을 저장하여 리턴한다.
++ 문자열을 반복문 돌리고 싶을 경우 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다.
++ 문자열을 배열로 변환, spread operator(전개 구문)을 사용
+````
+ <script>
+    // 전개구문
+    const str = "문자열을 배열로 변환하기";
+    const arr = [...str];
+    console.log("배열인가?", Array.isArray(arr));
+    console.log("하나씩 출력", arr);
+
+    // forEach + 화살표 함수
+    arr.forEach(strArr => console.log(strArr));
+    // [...str].forEach(strArr => console.log(strArr));
+
+    const sentence = "문자열을,배열로,변환후,forEach,함수를,사용";
+
+    // split() 함수 : 문자열을 특정 구분자로 잘라서 배열로 만든다.
+    const words = sentence.split(",");
+
+    [...words].forEach(function(wordsArr, index){
+        console.log(wordsArr)
+    });
 </script>
 ````
 
@@ -359,33 +395,6 @@
     for ( let i = 0; i < fruits.length; i++ ) { /
         document.write(fruits[i]); 
     } 
-</script>
-````
-
-## 문자열을 배열로 전개구문과 split()함수 + 반복문 forEach
-+ string.split(separator, limit) 함수:  문자열을 'separator'로 잘라서, 'limit' 크기 이하의 배열에 잘라진 문자열을 저장하여 리턴한다.
-+ 문자열을 반복문 돌리고 싶을 경우 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다.
-+ 문자열을 배열로 변환, spread operator(전개 구문)을 사용
-````
- <script>
-    // 전개구문
-    const str = "문자열을 배열로 변환하기";
-    const arr = [...str];
-    console.log("배열인가?", Array.isArray(arr));
-    console.log("하나씩 출력", arr);
-
-    // forEach + 화살표 함수
-    arr.forEach(strArr => console.log(strArr));
-    // [...str].forEach(strArr => console.log(strArr));
-
-    const sentence = "문자열을,배열로,변환후,forEach,함수를,사용";
-
-    // split() 함수 : 문자열을 특정 구분자로 나누어 배열로 만든다.
-    const words = sentence.split(",");
-
-    [...words].forEach(function(wordsArr, index){
-        console.log(wordsArr)
-    });
 </script>
 ````
 

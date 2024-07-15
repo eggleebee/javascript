@@ -11,22 +11,28 @@
 <body>
     <h1>JavaScript</h1>
     <h2>배열과 자료구조</h2>
-    <h3>문자열과 반복문 for와 for...of</h3>
+    <h3>문자열 반복문</h3>
 
     <script>
         let str = 'hello';
 
         // for 사용
         for (let i = 0; i < str.length; i++) {
-            let txt = str[i]
-            console.log("for 사용", txt)
+            let value = str[i]
+            console.log("for 사용", value)
+        }
+
+        // forEach(혹은 map)사용
+        str.split('').forEach(value => {
+            console.log("forEach 사용" , value);
+        })
+
+        // for ... of 사용
+        for (let value of str) {
+            console.log("for ... of 사용", value);
         }
 
         // for ... of 사용
-        for (let txt of str) {
-            console.log("for ... of 사용", txt);
-        }
-
         let iterable = "안녕하세요";
 
         for (let value of iterable) {
