@@ -154,13 +154,13 @@
 ### for of
 
 ````
-<script>
+ <script>
     let iterable = [10, 20, 30];
 
     // variable : 각 반복에 서로 다른 속성값이 variable에 저장됩니다.
     // iterable : 반복되는 열거가능(enumerable)한 속성이 있는 객체
 
-    for (variable of iterable) {
+    for (let variable of iterable) {
         console.log(variable);
     }
 
@@ -176,6 +176,9 @@
     }
 </script>
 ````
+
+## 문자열 반복문
+### 문자열(String)-for-for of 반복문
 
 ````
 <script>
@@ -195,99 +198,40 @@
     let iterable = "안녕하세요";
 
     for (let value of iterable) {
-        console.log("for ... of 사용", value); 
+        console.log("for ... of 사용", value);
     }
 </script>
 ````
 
+### 문자열(String)-forEach 반복문
+
+````
+ <script>
+    // 문자열을 반복문 돌리고 싶을 경우
+    // 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다
+    // 문자열을 배열로 변환,spread operator(전개 구문)을 사용
+    const str = "문자열을 배열로 변환하기";
+    const arr = [...str];
+    console.log("배열인가?", Array.isArray(arr));
+    console.log("하나씩 출력", arr);
+
+    // forEach + 화살표 함수
+    arr.forEach(strArr => console.log(strArr));
+    // [...str].forEach(strArr => console.log(strArr));
+
+    const sentence = "문자열을,배열로,변환후,forEach,함수를,사용";
+    const words = sentence.split(",");
+
+    [...words].forEach(function(wordsArr, index){
+        console.log(wordsArr)
+    });
+</script>
+````
 ### for in
+
+
+
 ### map
-
-````
-<script>
-    // 초기값 할당
-    const colors = ['빨강', '노랑', '파랑']
-    console.log(colors)
-
-    // 특정 요소만 뽑아내기
-    let animals = ["원숭이", "사자", "호랑이"];
-
-    console.log(animals[0]); //원숭이
-    console.log(animals[1]); //사자
-    console.log(animals[2]); //호랑이
-
-    // 빈 배열
-    const nums = []
-    nums[0] = 100
-    nums[1] = 200
-    nums[2] = 300
-    console.log(nums)
-
-    // 배열 크기 지정
-    const arr = [, , , ,]
-
-    // 배열 요소 개수 확인하기 : 배열.length
-    // 배열 요소에 접근하기 : 배열[인덱스]
-    // 반복문을 이용하여 배열의 갯수만큼 모든 요소를 출력
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]) // 값이 할당되지 않아서 undefined 4번 출력
-    }
-
-    // 서로 다른 데이터 타입을 담을 수 있다.    
-    var array = [123, '안녕하세요', true, function () { }, [123, 456], ['딸기', '바나나']]
-    console.log(array)
-    console.log(array.length) // 6
-
-    // 배열의 크기를 임의로 변경
-    array.length = 2;
-    console.log(array)
-    console.log(array.length)
-
-    // 새로운 배열을 추가하면 크기는 자동으로 변경 
-    array[5] = 'apple';
-    console.log(array)
-    console.log(array.length)
-
-    // 새로운 배열 추가로 크기 변경
-    array.push('banana');
-    console.log(array)
-    console.log(array.length)
-
-    // 반복문을 이용하여 배열의 모든 요소를 출력
-    for (var i = 0; i < array.length; i++) {
-        document.write(array[i], "<br>");
-    }
-</script>
-````
-
-````
-<script>
-    // 빈 배열
-    var arr = new Array();
-    arr[0] = 100;
-    arr[1] = 200;
-    arr[2] = "javascript";
-
-    document.write(arr[0], "<br>");
-    document.write(arr[1], "<br>");
-    document.write(arr[2], "<br>");
-
-    // 배열 생성 (초기 값 할당)
-    var arr = new Array('zero', 'one', 'tow');
-
-    for (var i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
-    }
-
-    // 배열 생성 (배열 크기 지정)
-    // 원소가 1개이고 숫자인 경우 배열 크기로 사용됨
-    var arr = new Array(3);
-
-    for (var i = 0; i < arr.length; i++) {
-        console.log(arr[i]); // 값이 할당되지 않아서 undefined 3번 출력  
-    }
-</script>
-````
 
 ## 배열의 주요 메서드
 ### 요소를 더하거나 지우는 메서드

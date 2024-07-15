@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>문자열(String)-forEach 반복문</h3>
+
+    <script>
+        // 문자열을 반복문 돌리고 싶을 경우
+        // 문자열은 Array가 아니어서 forEach 함수를 사용할 수 없다
+        // 문자열을 배열로 변환,spread operator(전개 구문)을 사용
+        const str = "문자열을 배열로 변환하기";
+        const arr = [...str];
+        console.log("배열인가?", Array.isArray(arr));
+        console.log("하나씩 출력", arr);
+
+        // forEach + 화살표 함수
+        arr.forEach(strArr => console.log(strArr));
+        // [...str].forEach(strArr => console.log(strArr));
+
+        const sentence = "문자열을,배열로,변환후,forEach,함수를,사용";
+        const words = sentence.split(",");
+
+        [...words].forEach(function(wordsArr, index){
+            console.log(wordsArr)
+        });
+    </script>
+</body>
+
+</html>
