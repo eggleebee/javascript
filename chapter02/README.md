@@ -711,6 +711,7 @@
 
 ````
 <script>
+    //선언은 let으로 보통 합니다. (변수할당의 변화가 있을 때 대비)
     for( let i = 0 ; i < 10 ; i++ ){
         console.log( i )
     }
@@ -720,7 +721,6 @@
         console.log(i)
     }
 </script>
-````
 ## break문 
 > + 반복문(for, for...in, for...of, while, do...while) 또는 switch문의 코드 블록을 탈출한다.
 > + 중첩된 for문의 내부 for문에서 break문을 실행하면 내부 for문을 탈출하여 외부 for문으로 진입한다.

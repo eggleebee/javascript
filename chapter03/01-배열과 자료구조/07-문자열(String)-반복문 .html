@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>문자열(String)-반복문</h3>
+
+    <script>
+        let str = 'hello';
+
+        // for 사용
+        for (let i = 0; i < str.length; i++) {
+            let txt = str[i]
+            console.log("for 사용", txt)
+        }
+
+        // for ... of 사용
+        for (let txt of str) {
+            console.log("for ... of 사용", txt);
+        }
+
+        let iterable = "안녕하세요";
+
+        for (let value of iterable) {
+            console.log("for ... of 사용", value); 
+        }
+    </script>
+</body>
+
+</html>

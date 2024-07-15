@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>반복문 for of</h3>
+
+    <script>
+        let iterable = [10, 20, 30];
+
+        // variable : 각 반복에 서로 다른 속성값이 variable에 저장됩니다.
+        // iterable : 반복되는 열거가능(enumerable)한 속성이 있는 객체
+
+        for (let variable of iterable) {
+            console.log(variable);
+        }
+
+        let array = ['사자', '호랑이', '기린']
+        console.log(array)
+        console.log(array[0])
+        console.log(array[1])
+        console.log(array[2])
+
+        // Object를 제외한 반복 가능한 iterable Object (Array, Map, Set, String)등을 순회.
+        for (const element of array) {
+            console.log('for of문으로 출력', element)
+        }
+    </script>
+</body>
+
+</html>

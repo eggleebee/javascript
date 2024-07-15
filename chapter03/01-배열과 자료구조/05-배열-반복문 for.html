@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>반복문 for</h3>
+
+    <script>
+        // 기본구조
+        // for (조건) {실행문}
+    
+        // 실행예시1
+        let arr = ["사과", "포도"]; 
+        for ( let i = 0; i < arr.length; i++ ) { // i가 arr.length까지 i++(계속 더하며) 반복된다.
+        alert(arr[i]); // arr[i] 번째 객체를 반복하여 알럿노출
+        } // arr.length 번째까지 무한반복 -> 이후 종료
+
+        // 실행예시2
+        const food = ['피자','콜라','치킨','파스타','핫도그']
+        console.log(food)
+        console.log(food[0])//피자
+        console.log(food[1])//콜라
+        console.log(food[2])//치킨
+        console.log(food[3])//파스타
+        console.log(food[4])//핫도그
+        console.log(food.length)// 5
+
+        for( let i = 0 ; i < food.length ; i++ ){
+            console.log( food[i] )
+        }
+    </script>
+</body>
+
+</html>

@@ -10,6 +10,54 @@
 + 배열 리터럴 **대괄호[요소, 요소, 요소, … , 요소]** 를 사용하여 만드는 방법
 + **Array() 생성자 함수**로 배열을 생성하는 방법
 
+### 배열 리터럴 **대괄호[요소, 요소, 요소, … , 요소]** 로 배열 생성
+
+````
+<script>
+    // 빈 배열
+    const nums = []
+    nums[0] = 100
+    nums[1] = 200
+    nums[2] = 300
+    console.log(nums)
+
+    // 초기값 할당
+    const colors = ['빨강', '노랑', '파랑']
+    console.log(colors)
+</script>
+````
+
+###  **Array() 생성자 함수**로 배열을 생성
+
+````
+<script>
+    // 빈 배열
+    var arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    document.write(arr[0], "<br>");
+    document.write(arr[1], "<br>");
+    document.write(arr[2], "<br>");
+
+    // 배열 생성 (초기 값 할당)
+    var arr = new Array('zero', 'one', 'tow');
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    // 배열 생성 (배열 크기 지정)
+    // 원소가 1개이고 숫자인 경우 배열 크기로 사용됨
+    var arr = new Array(3);
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]); // 값이 할당되지 않아서 undefined 3번 출력  
+    }
+</script>
+````
+
 ## 배열 요소에 접근하기
 + **배열[인덱스]**
 + 배열의 각각의 요소에 접근하려면 배열 바로 뒤에 대괄호[ ]를 입력하고 그 안에 숫자를 넣는다. 
@@ -19,16 +67,139 @@
 > + 배열의 순서 : 각 배열에는 순서가 생기는데 이를 index라고 한다. (index는 0부터 시작)
 > + 배열의 이름 : 배열은 여러 개의 요소를 갖기 때문에 일반적으로 배열 이름을 복수형으로(number →numbers) 짓는다.
 
+````
+<script>
+    // 배열 요소에 접근, 특정 요소만 뽑아내기
+    const animals = ["원숭이", "사자", "호랑이"];
+
+    console.log(animals[0]); //원숭이
+    console.log(animals[1]); //사자
+    console.log(animals[2]); //호랑이
+</script>
+````
+
 ## 배열 요소 개수 확인하기
 + **배열.length**
 + 배열 내부에 들어 있는 요소의 개수를 확인할 때는 배열의 **length** 속성을 사용한다. 
 + 배열 뒤에 점(.)을 찍고 length라고 입력해주면 된다.
++ 또한, length 속성 값을 직접 설정하여, 배열의 길이를 조정할 수도 있다.
+
+````
+<script>
+    // 배열 크기 지정
+    const array = [, , , ,]
+    
+    // 배열의 길이는 Array 인스턴스의 length 속성을 통해서 확인할 수 있다.        
+    // 배열 요소 개수 확인하기 : 배열.length
+    // 배열 요소에 접근하기 : 배열[인덱스]
+
+    // 반복문을 이용하여 배열의 갯수만큼 모든 요소를 출력
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]) // 값이 할당되지 않아서 undefined 4번 출력
+    }
+
+    // 배열의 크기를 임의로 변경
+    // length 속성 값을 직접 설정하여, 배열의 길이를 조정할 수도 있습니다.
+    array.length = 2;
+    console.log(array.length)
+    console.log(array) // [비어 있음 × 2]
+
+    // 새로운 배열을 추가하면 크기는 자동으로 변경 
+    array[5] = 'apple';
+    console.log(array.length)
+    console.log(array) // [비어 있음 × 5]
+
+    // 새로운 배열 추가로 크기 변경
+    array.push('banana');
+    console.log(array.length)
+    console.log(array) // [비어 있음 × 5, 'apple', 'banana']
+
+    // 반복문을 이용하여 배열의 모든 요소를 화면에 출력
+    for (let i = 0; i < array.length; i++) {
+        document.write(array[i], "<br>");
+    }
+</script>
+````
 
 ## 배열의 반복문
 반복문을 이용하여 배열안의 값들을 하나씩 돌면서 전부 출력할 수 있다.
 
 ### for
-### forEach
+````
+<script>
+    // 기본구조
+    // for (조건) {실행문}
+
+    // 실행예시1
+    let arr = ["사과", "포도"]; 
+    for ( let i = 0; i < arr.length; i++ ) { // i가 arr.length까지 i++(계속 더하며) 반복된다.
+    alert(arr[i]); // arr[i] 번째 객체를 반복하여 알럿노출
+    } // arr.length 번째까지 무한반복 -> 이후 종료
+
+    // 실행예시2
+    const food = ['피자','콜라','치킨','파스타','핫도그']
+    console.log(food)
+    console.log(food[0])//피자
+    console.log(food[1])//콜라
+    console.log(food[2])//치킨
+    console.log(food[3])//파스타
+    console.log(food[4])//핫도그
+    console.log(food.length)// 5
+
+    for( let i = 0 ; i < food.length ; i++ ){
+        console.log( food[i] )
+    }
+</script>
+````
+### for of
+
+````
+<script>
+    let iterable = [10, 20, 30];
+
+    // variable : 각 반복에 서로 다른 속성값이 variable에 저장됩니다.
+    // iterable : 반복되는 열거가능(enumerable)한 속성이 있는 객체
+
+    for (variable of iterable) {
+        console.log(variable);
+    }
+
+    let array = ['사자', '호랑이', '기린']
+    console.log(array)
+    console.log(array[0])
+    console.log(array[1])
+    console.log(array[2])
+
+    // Object를 제외한 반복 가능한 iterable Object (Array, Map, Set, String)등을 순회.
+    for (const element of array) {
+        console.log('for of문으로 출력', element)
+    }
+</script>
+````
+
+````
+<script>
+    let str = 'hello';
+
+    // for 사용
+    for (let i = 0; i < str.length; i++) {
+        let txt = str[i]
+        console.log("for 사용", txt)
+    }
+
+    // for ... of 사용
+    for (let txt of str) {
+        console.log("for ... of 사용", txt);
+    }
+
+    let iterable = "안녕하세요";
+
+    for (let value of iterable) {
+        console.log("for ... of 사용", value); 
+    }
+</script>
+````
+
 ### for in
 ### map
 
@@ -117,14 +288,6 @@
     }
 </script>
 ````
-
-https://velog.io/@promotion_dev/Javascript-%EB%B0%B0%EC%97%B4%EA%B3%BC-%EB%B0%98%EB%B3%B5%EB%AC%B8
-
-https://hongong.hanbit.co.kr/javascript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1-%EC%9A%94%EC%86%8C-%EC%B6%94%EA%B0%80%EC%99%80-%EC%A0%9C%EA%B1%B0/
-
-https://9silvery2.gitbook.io/javascript/javascript/undefined-2
-
-https://dinfree.com/lecture/frontend/123_js_2.html#m5
 
 ## 배열의 주요 메서드
 ### 요소를 더하거나 지우는 메서드
