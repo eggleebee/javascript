@@ -130,27 +130,41 @@
     // 기본구조
     // for (조건) {실행문}
 
-    // 실행예시1
-    let arr = ["사과", "포도"]; 
-    for ( let i = 0; i < arr.length; i++ ) { // i가 arr.length까지 i++(계속 더하며) 반복된다.
-    alert(arr[i]); // arr[i] 번째 객체를 반복하여 알럿노출
-    } // arr.length 번째까지 무한반복 -> 이후 종료
+    const food = ['피자','콜라','치킨']
+    console.log('음식 갯수', food.length) // 3
+    console.log('음식 전체 출력', food)
+    console.log('food[0] 출력', food[0])// 피자
+    console.log('food[1] 출력', food[1])// 콜라
+    console.log('food[2] 출력', food[2])// 치킨
 
-    // 실행예시2
-    const food = ['피자','콜라','치킨','파스타','핫도그']
-    console.log(food)
-    console.log(food[0])//피자
-    console.log(food[1])//콜라
-    console.log(food[2])//치킨
-    console.log(food[3])//파스타
-    console.log(food[4])//핫도그
-    console.log(food.length)// 5
-
+    // 반복문으로 음식 갯수만큼 과일이름을 화면에 출력
+    // i가 arr.length까지 i++(계속 더하며) 반복된다.
+    // food[i] 번째 객체를 반복하여 콘솔출력
+    // arr.length 번째까지 반복, 이후 종료
     for( let i = 0 ; i < food.length ; i++ ){
         console.log( food[i] )
     }
 </script>
 ````
+
+### 배열 → 문자열 사이에 구분자 넣기
+````
+<script>
+    const arr = ["사과", "포도"]; 
+
+    console.log('과일갯수', arr.length);
+    const count = arr.length
+    console.log('과일갯수 count변수 값 출력', count);
+
+    const fruits = arr.join(" , ")
+
+    // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
+    for ( let i = 0; i < fruits.length; i++ ) { /
+        document.write(fruits[i]); 
+    } 
+</script>
+````
+
 ### for of
 
 ````

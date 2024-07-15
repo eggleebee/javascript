@@ -710,15 +710,24 @@
 ````
 
 ````
-<script>
-    //선언은 let으로 보통 합니다. (변수할당의 변화가 있을 때 대비)
-    for( let i = 0 ; i < 10 ; i++ ){
-        console.log( i )
+ <script>
+    // 선언은 let으로 보통 합니다. (변수할당의 변화가 있을 때 대비)
+    // 1부터 10까지 1씩 증가 반복문 
+    for (let i = 0; i < 10; i++) {
+        console.log(i)
     }
 
     // 증감값 2씩
-    for( let i = 0 ; i < 10 ;  i = i + 2 ) {
+    for (let i = 0; i < 10; i = i + 2) {
         console.log(i)
+    }
+
+    // 1에서 100까지 더하기
+    let sum = 0;
+
+    for (let i = 1; i <= 100; i++) {
+        document.write(i, "<br>");
+        sum = sum + i;
     }
 </script>
 ## break문 

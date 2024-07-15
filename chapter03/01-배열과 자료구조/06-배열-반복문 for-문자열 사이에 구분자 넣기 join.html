@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>반복문 for</h3>
+
+    <script>
+        const arr = ["사과", "포도"]; 
+
+        console.log('과일갯수', arr.length);
+        const count = arr.length
+        console.log('과일갯수 count변수 값 출력', count);
+
+        const fruits = arr.join(" , ")
+
+        // 반복문으로 과일갯수만큼 과일이름을 화면에 출력
+        for ( let i = 0; i < fruits.length; i++ ) { /
+            document.write(fruits[i]); 
+        } 
+
+    </script>
+</body>
+
+</html>

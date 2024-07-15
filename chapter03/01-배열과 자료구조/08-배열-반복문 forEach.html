@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>배열과 자료구조</h2>
+    <h3>반복문 forEach</h3>
+
+    <script>
+        const animals = ['사자', '호랑이', '원숭이'];
+
+        animals.forEach(function (animal) {
+            console.log('animal 출력', animal)
+        })
+
+        animals.forEach(function (animal, index) {
+            console.log('인덱스 번호', index, '동물', animal)
+        })
+
+        // 화살표 함수
+        animals.forEach((animal) => {
+            console.log('화살표 함수 사용 animal 출력', animal)
+        });
+
+        // 화살표 함수 (소괄호 생략)
+        animals.forEach(animal => {
+            console.log(animal)
+        });
+
+    </script>
+</body>
+
+</html>
