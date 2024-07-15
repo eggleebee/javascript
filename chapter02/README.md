@@ -732,6 +732,25 @@
 </script>
 ````
 ````
+ <script>
+    document.write("<h3>폰트 사이즈 키우기</h3>");
+    document.write('<p>문장을 작성합니다</p>');
+
+    let size = 40;
+
+    document.write('<span style="font-size:' + size + 'px;">');
+    document.write('보여질 글자');
+    document.write('</span>');
+
+    for (let size = 10; size <= 35; size += 5) {
+        document.write('<span style="font-size:' + size + 'px;">');
+        document.write('보여질 글자' + size);
+        document.write('</span>');
+    }    
+</script>
+````
+
+````
 <script>
     for (let i = 0; i < 50; i++) {
         if (i % 3 === 0 || i % 5 === 0) {
@@ -756,15 +775,24 @@
 
 ````
 <script>
-    // continue : 다음 루프로 넘어간다
+    // break : 반복문 탈출
     for (let i = 0; i < 10; i++) {
         if (i == 5) {
-            continue;
-            // 아래쪽 문장 실행하지 않고 for문의 조건식으로 돌려보냄  
-            // 예외를 만들때 사용
+            break; // 반복문이 종료됨
         }
         console.log(i)
     }
+
+    let sum = 0;
+
+    for (let i = 0; i <= 10; i++) {
+        if (sum > 10) {
+            break;
+        }
+        console.log("i값 출력", i)
+        sum += i;
+    }
+    console.log(sum); // 15
 </script>
 ````
 
@@ -816,11 +844,11 @@
             console.log(i)
             continue;// 짝수제외한 홀수만 출력
         }
-        document.write(i); // for문 돌면서 하나씩 출력 1,2,3,4,5,6,7,8,9,10
+        document.write(i, " + "); // for문 돌면서 하나씩 출력 1,2,3,4,5,6,7,8,9,10
         sum += i;//for문 돌면서 하나씩 받은 숫자를 합산한다
     }
 
-    //for문을 다 돌고 난 후 합산 출력
+    // for문을 다 돌고 난 후 합산 출력
     document.write("합산된 값은 ", sum)
 </script>
 ````

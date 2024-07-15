@@ -21,7 +21,18 @@
                 break; // 반복문이 종료됨
             }
             console.log(i)
-        } 
+        }
+
+        let sum = 0;
+
+        for (let i = 0; i <= 10; i++) {
+            if (sum > 10) {
+                break;
+            }
+            console.log("i값 출력", i)
+            sum += i;
+        }
+        console.log(sum); // 15
     </script>
 </body>
 

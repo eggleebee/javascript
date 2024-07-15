@@ -10,9 +10,9 @@
 
 <body>
     <h1>JavaScript</h1>
-    <h2>반복문</h2>
-    <h3>for</h3>
-    <h4>continue</h4>
+    <h2>반복문 제어</h2>
+    <h3>continue</h3>
+    <h4>홀수만 합산</h4>
 
     <script>
         let sum = 0, // 합산을 위한 변수선언
@@ -23,11 +23,11 @@
                 console.log(i)
                 continue;// 짝수제외한 홀수만 출력
             }
-            document.write(i); // for문 돌면서 하나씩 출력 1,2,3,4,5,6,7,8,9,10
+            document.write(i, " + "); // for문 돌면서 하나씩 출력 1,2,3,4,5,6,7,8,9,10
             sum += i;//for문 돌면서 하나씩 받은 숫자를 합산한다
         }
 
-        //for문을 다 돌고 난 후 합산 출력
+        // for문을 다 돌고 난 후 합산 출력
         document.write("합산된 값은 ", sum)
     </script>
 </body>

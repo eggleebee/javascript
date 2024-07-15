@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>반복문</h2>
+    <h3>for</h3>
+    <h4>폰트사이즈 키우기</h4>
+
+    <script>
+        document.write("<h3>폰트 사이즈 키우기</h3>");
+        document.write('<p>문장을 작성합니다</p>');
+
+        let size = 40;
+
+        document.write('<span style="font-size:' + size + 'px;">');
+        document.write('보여질 글자');
+        document.write('</span>');
+
+        for (let size = 10; size <= 35; size += 5) {
+            document.write('<span style="font-size:' + size + 'px;">');
+            document.write('보여질 글자' + size);
+            document.write('</span>');
+        }    
+    </script>
+</body>
+
+</html>
