@@ -330,9 +330,14 @@
         console.log("for 사용", value)
     }
 
-    // forEach(혹은 map)사용
+    // forEach 사용
     str.split('').forEach(value => {
         console.log("forEach 사용" , value);
+    })
+
+    // map 사용
+    str.split('').map(value => {
+        console.log("map 사용" , value);
     })
 
     // for ... of 사용
