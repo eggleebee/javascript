@@ -124,7 +124,7 @@
 ````
 
 ## 배열의 반복문 for
-반복문을 이용하여 배열안의 값들을 하나씩 돌면서 전부 출력할 수 있다.
++ 반복문을 이용하여 배열안의 값들을 하나씩 돌면서 전부 출력할 수 있다.
 
 ````
 <script>
@@ -153,7 +153,8 @@
 </script>
 ````
 
-## 배열의 반복문 for of
+## 배열의 반복문 for...of
++ for...of 문은 순회 가능한(iterable) 객체의 요소를 순차적으로 접근하는 데 사용된다.
 
 ````
  <script>
@@ -172,7 +173,6 @@
     console.log(array[1])
     console.log(array[2])
 
-    // Object를 제외한 반복 가능한 iterable Object (Array, Map, Set, String)등을 순회.
     for (const element of array) {
         console.log('for of문으로 출력', element)
     }
@@ -180,6 +180,10 @@
 ````
 
 ## 배열의 반복문 forEach와 화살표 함수
++ forEach 메서드도 배열을 순회하기 위해 사용되지만, 기본적인 for 반복문과는 다른 방식으로 함수를 사용한다.
+> + Current Value (명명된 매개변수) - 처리할 현재 요소
+> + Index (선택적 매개변수) - 처리할 현재 요소의 인덱스
+> + Array (선택적 매개변수) - forEach 메서드를 호출한 배열
 
 ````
 <script>
@@ -391,6 +395,7 @@
 > + shift
 > + unshift
 > + splice
+> + slice( startIndex, endIndex)
 > + contact
 
 ### 원하는 요소 찾기 메서드
