@@ -934,29 +934,3 @@
     }
 </script>
 ````
-
-````
- <script>
-    for (let i = 0; i < 100; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("15의 배수 출력", i)
-        }
-    }
-
-    for (let i = 0; i < 50; i++) {
-        if (i % 3 === 0 || i % 5 === 0) {
-            console.log("3의 배수와  5의 배수 출력", i)
-        }
-    }
-</script>
-````
-
-````
- <script>
-    for (let i = 0; i < 50; i++) {
-        if (i % 3 === 0 || i % 5 === 0) {
-            console.log("3의 배수와  5의 배수 출력", i)
-        }
-    }
-</script>
-````
