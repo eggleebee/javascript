@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>함수 선언식의 호이스팅</h3>
+    <script>
+        // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
+        // 이는 함수 선언식이 호이스팅되기 때문.
+        console.log(greet()); // "Hello, World!"
+
+        function greet() {
+            return "Hello, World!";
+        }
+    </script>
+</body>
+
+</html>
