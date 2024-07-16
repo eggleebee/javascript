@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>익명함수</h3>
+    <script>
+        // 익명함수는 연결된 이름이 없는 함수
+        // 익명 함수 선언 및 변수에 대입
+        let sayHello = function () {
+            document.write("안녕하세요 <br>")
+        }
+
+        sayHello(); // 변수 sayHello에 할당했으니 함수 이름처럼 사용해서 익명 함수를 실행한다.
+
+        // 리턴값이 있는 익명함수
+        function func() {
+            document.write("1. 함수가 실행되었습니다. <br>");
+            return;
+
+            document.write("2. 함수가 실행되었습니다. <br>"); // 실행안됨
+        }
+
+        func();
+
+        // 매개변수 + 리턴문
+        // 함수 선언 후 변수 add에 할당
+        let add = function (a, b) {
+            return a + b;
+        }
+
+        // 익명 함수 실행 후 결과값을 변수 sum에 저장.
+        let sum = add(100, 200)
+        document.write(sum , "<br>")
+    </script>
+</body>
+
+</html>
