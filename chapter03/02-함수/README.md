@@ -251,6 +251,16 @@
 
 ````
  <script>
+    const 변수명 = function(매개변수 목록) {
+        코드 실행부
+    }
+
+    변수명(인수 목록)
+</script>
+````
+
+````
+ <script>
     var result; // var로 선언된 (함수 표현식) 변수는 호이스팅되어 undefined로 초기화
     console.log(result)
 
