@@ -24,6 +24,10 @@
 > + 함수 이름 뒤에 괄호를 붙여서 이 함수를 실행 이를 함수의 호출(function call)이라고 한다.
 > + 여기서 괄호 안에 넘겨준 2, 3을 인수(argument)라고 부른다.
 
+## 자바스크립트 함수 생성 2가지 방법
++ 함수 선언식(Function Declarations)
++ 함수 표현식(Function Expressions).
+
 
 ## 함수 선언
 + function 키워드를 작성하면 함수 정의할 수 있다.
@@ -177,10 +181,6 @@
     console.log(result);
 </script>
 ````
-
-## 자바스크립트 함수 생성 2가지 방법
-+ 함수 선언식(Function Declarations)
-+ 함수 표현식(Function Expressions).
 
 
 ## 리터럴(literal)
