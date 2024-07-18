@@ -8,13 +8,24 @@
 </head>
 <body>
  
-<script>
-    function returnUndefined() {
-  return;
-}
-function noReturn() {}
-returnUndefined(); // undefined
-noReturn(); // undefined
-</script>
+    <script>
+        (function() {
+            console.log("즉시 실행함수!!")
+        }());
+    
+
+        // 함수에서 반환한 값을 add 변수에 할당한 후 콘솔창에 표시!
+        let add =  (function() {
+            return 10 + 20
+        }());
+        console.log(add)
+
+        // 매개변수가 필요한 함수라면 function 예약어 다음의 괄호 안에 매개변수를 넣고 함수를 정의한다. 
+        // 그리고 함수 끝에 있는 괄호에는 실제 실행할 떄 사용할 인수를 넣고 실행한다.
+        let plus =  (function() {
+            return 30 + 20
+        }());
+        console.log(plus)
+    </script>
 </body>
 </html>
