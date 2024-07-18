@@ -253,6 +253,15 @@
 > + index(Optional) - 배열의 현재 요소의 인덱스
 > + array(Optional) - 호출한 배열
 
+
+````
+<script>
+    [1, 2, 3, 4, 5].filter(function (x) {
+        return x % 2 === 0;
+    }); // [2, 4]
+</script>
+````
+
 ````
 <script>
     // filter + 화살표 함수
