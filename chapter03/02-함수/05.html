@@ -9,13 +9,12 @@
 <body>
  
     <script>
-        let add = function(a,b){
-            return a+b
+        function func(a, b, c) {
+            console.log(arguments);
+            console.log(arguments.length);
         }
 
-        result = add(10,20)
-
-        console.log( result )
+        func(1, 2, 3)
     </script>
 </body>
 </html>
