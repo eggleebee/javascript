@@ -3,7 +3,7 @@
 ## 함수 리터럴
 | 리터럴방식 | 일반적인 방식 |
 |---|---|
-| let hello = function(name) { <br> &nasp; &nasp; &nasp; &nasp; alert(name + "님 환영합니다."); <br> } <br> hello("홍길동"); | function hello(name){ <br> alert(name + "님 환영합니다."); <br> } <br> hello("홍길동"); |
+| let hello = function(name) { <br>    alert(name + "님 환영합니다."); <br> } <br> hello("홍길동"); | function hello(name){ <br> alert(name + "님 환영합니다."); <br> } <br> hello("홍길동"); |
 
 ## 함수 선언
 + function 키워드를 작성하고, 함수 이름과 (매개변수 목록)을 작성한 후 { 코드블럭 }을 작성한다. 
