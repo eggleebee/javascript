@@ -8,6 +8,7 @@
 ### 함수 구성 요소
 ````
 <script>
+    // 함수 선언
     function add(x, y) {
         const result = x + y;
         return result;
@@ -32,18 +33,20 @@
     function 함수이름(매개변수 목록) {
         함수 실행부
     }
+</script>
+````
 
+````
+<script>
     // 함수 선언
     function add (x, y) {
         const result = x + y;
         console.log(result);
         return result;
     }
-
-    // 함수호출
-    add(2, 3);
 </script>
 ````
+
 
 ## 함수 호출
 + 함수는 선언할 때 선언 후 함수가 바로 실행되지 않는다. 
@@ -52,7 +55,6 @@
 + 반복 사용하는 코드를 함수로 만들어 필요할 때마다 호출할 수 있다. 
 + 반복되는 코드블럭을 식별자 호출만으로 편하게 재사용이 가능하다.
 
-
 ````
 <script>
     function 함수이름(매개변수 목록) {
@@ -60,7 +62,11 @@
     }
 
     함수이름(인자 목록)
+</script>
+````
 
+````
+<script>
     // 함수 선언
     function add (x, y) {
         let result = x + y;
@@ -74,7 +80,6 @@
     add(3, 5);
 </script>
 ````
-
 
 ## 실행 순서
 
