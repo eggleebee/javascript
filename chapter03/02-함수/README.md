@@ -275,18 +275,6 @@
 
 
 ````
-<script>
-    // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
-    // 이는 함수 선언식이 호이스팅되기 때문.
-    console.log(greet()); // "Hello, World!"
-
-    function greet() {
-        return "Hello, World!";
-    }
-</script>
-````
-
-````
  <script>
     // 함수 선언문으로 정의한 함수는 함수 선언 전에 호출할 수 있음
     console.log(add) 
@@ -296,6 +284,18 @@
         return x + y;
     }
  </script>
+````
+
+````
+<script>
+    // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
+    // 이는 함수 선언식이 호이스팅되기 때문.
+    console.log(greet()); // "Hello, World!"
+
+    function greet() {
+        return "Hello, World!";
+    }
+</script>
 ````
 
 ````
