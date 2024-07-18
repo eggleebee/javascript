@@ -367,8 +367,13 @@
 ## 함수 생성 시점과 함수 호이스팅
 + 함수 선언문은  런타임(runtime) 이전에 자바스크립트 엔진에 의해 먼저 실행되어 함수 객체가 먼저 생성이 된다. 
 + 코드가 실행될 시 이미 생성된 함수의 객체를 참조할 수 있으며 심지어 호출까지 가능하다. 
++ 함수 선언식은 코드가 실행되기 전에 로드되지만, 함수 표현식은 인터프리터가 해당 코드 줄에 도달 할 때만 로드된다.
 + 함수 선언문이 코드의 최상단으로 끌어 올려진 것처럼 동작하는 자바스크립트의 고유 특징을 함수 호이스팅(function hoisting)이라고 한다.
++ 함수 선언식은 var 문과 유사하게 호이스팅 된다. 
++ 반면, 함수 표현식은 호이스팅되지 않으므로 정의 된 범위에서 로컬 변수의 복사본을 유지할 수 있다.
++ 함수 표현식은 함수 이름이 필요없기에 가독성이 더 높은 장점이 있다.
 + 함수 호이스팅은 함수를 호출하기 이전에 반드시 함수를 정의해야한다는 당연한 규칙을 무시한다. 이같은 문제 때문에 함수 선언문 대신 함수 표현식을 사용할것이 권장된다.
+
 
 ````
  <script>
@@ -393,6 +398,17 @@
     }
 </script>
 ````
+````
+<script>
+    // 함수 표현식
+    // 에러 발생! foo 함수는 아직 로드안됨
+    alert(foo()); 
+
+    var foo = function() { 
+        return 5; 
+    }
+</script>
+````
 
 ````
  <script>
@@ -414,10 +430,45 @@
 + 이는 코드의 특정 영역에서 어떤 변수들을 사용할 수 있는지를 정의한다.
 
 
-### 스코프의 구분
-> + 글로벌 스코프(Global Scope) : 글로벌 스코프에 선언된 변수는 어디서든 접근 가능. (전역 변수)
-> + 함수 스코프(Function Scope) : 함수 내에서 선언된 변수는 해당 함수 내에서만 접근 가능. 외부에서는 접근할 수 없다.
-> + 블록 레벨 스코프(Block Level Scope) : let과 const를 사용하여 선언된 변수는 블록 레벨 스코프를 가진다. 해당 변수가 선언된 블록(중괄호 {} 안)에서만 접근 가능.
+## 스코프의 구분
++ 글로벌 스코프(Global Scope) 
++ 함수 스코프(Function Scope) 
++ 블록 레벨 스코프(Block Level Scope) 
+
+
+### 글로벌 스코프(Global Scope)
++ 글로벌 스코프에 선언된 변수는 어디서든 접근 가능. (전역 변수)
+
+````
+<script>
+    // 글로벌 스코프(Global Scope)
+    var globalVar = "전역 변수";
+
+    function checkScope() {
+        console.log(globalVar); // "전역 변수" 출력
+    }
+
+    checkScope();
+    console.log(globalVar); // "전역 변수" 출력
+</script>
+````
+
+### 함수 스코프(Function Scope) 
++ 함수 내에서 선언된 변수는 해당 함수 내에서만 접근 가능. 
++ 외부에서는 접근할 수 없다.
+
+````
+<script>
+    // 함수 스코프(Function Scope) 
+    function exampleFunction() {
+        var functionScopedVar = "함수 스코프 내 변수";
+        console.log(functionScopedVar); // "함수 스코프 내 변수" 출력
+    }
+
+    exampleFunction();
+    console.log(functionScopedVar); // ReferenceError(참조 불가) 발생
+</script>
+````
 
 ````
  <script>
@@ -431,6 +482,46 @@
     // 스코프(scope) : 변수는 코드의 일정 범위 안에서만 유효
     console.log(x); // 에러!
  </script>
+````
+
+### 블록 레벨 스코프(Block Level Scope) 
++ let과 const를 사용하여 선언된 변수는 블록 레벨 스코프를 가진다. 
++ 해당 변수가 선언된 블록(중괄호 {} 안)에서만 접근 가능.
+
+````
+<script>
+    // 블록 레벨 스코프(Block Level Scope)
+    function testBlockScope() {
+    if (true) {
+        let blockScopedVar = "블록 스코프 내 변수";
+        console.log(blockScopedVar); // "블록 스코프 내 변수" 출력
+    }
+
+    console.log(blockScopedVar); // ReferenceError(참조 불가) 발생
+    }
+
+    testBlockScope();
+</script>
+````
+
+## 스코프 체인(Scope Chain)
++ 자바스크립트에서 함수는 중첩될 수 있다.
++ 내부 함수는 외부 함수의 변수에 접근할 수 있다.
+
+````
+<script>
+    function outerFunction() {
+    var outerVar = "외부 함수 변수";
+
+    function innerFunction() {
+        console.log(outerVar); // "외부 함수 변수" 출력
+    }
+
+    innerFunction();
+    }
+
+    outerFunction();
+</script>
 ````
 
 ## 즉시 실행 함수
@@ -514,4 +605,6 @@
     [1, 2, 3, 4, 5].filter(x => x % 2 === 0);
 </script>
 ````
+
+https://helloworldjavascript.net/pages/170-function.html
 
