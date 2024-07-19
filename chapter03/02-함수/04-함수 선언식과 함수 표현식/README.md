@@ -28,7 +28,7 @@
 </script>
 ````
 
-### let, const'로 선언한 mylet, youLet은 왜 'ReferenceError'가 나올까?
+### let, const'로 선언한 x, y는 왜 'ReferenceError'가 나올까?
 + 호이스팅은 정말 단순히 최상단으로 올려주는 역할 뿐이고
 + 그 이후에 var과 다르게 let, const는 다른 과정이 추가된다.
 + 다시 말 해 let과 const는 호이스팅 되어 변수를 메모리에 올려놨지만 TDZ라는 지역에 있어 선언한 코드 줄을 지나야 접근 가능한 상태라고 보면 된다.
@@ -39,7 +39,7 @@
     let x = 10;
 
     console.log(y); // ReferenceError
-    const y = 10;
+    const y = 20;
 </script>
 ````
 
