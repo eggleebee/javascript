@@ -311,7 +311,7 @@
 </script>
 ````
 
-> 조건문-swirch-요일 확인
+> 조건문-switch-요일 확인
 ````
  <script>
         const engDay = 'friday';
@@ -342,7 +342,7 @@
     </script>
 ````
 
-> 조건문-swirch-url 확인
+> 조건문-switch-url 확인
 ````
  <script>
     const site = '구글';
@@ -374,7 +374,7 @@
 ## parseInt 란?
 + 자바스크립트에 내장되어 있는 함수로, 말 그대로 문자열을 파싱하여 문자열에 포함된 숫자를 찾아서 number로 형변환을 시켜준다.
 
-> 조건문-swirch-나이 확인
+> 조건문-switch-나이 확인
 ````
 <script>
     let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19')
