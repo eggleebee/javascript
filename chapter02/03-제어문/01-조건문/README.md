@@ -66,6 +66,55 @@
 </script>
 ````
 
+### 조건식 거짓으로 취급하는 값
++ false
++ undefined 
++ null 
++ 0 
++ NaN 
++ the empty string ("")
+
+````
+ <script>
+    // if 안의 조건문이 "참"이 아니기 때문에 else 문 실행
+    if (false) {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+
+    if (undefined) {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+
+    if (null) {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+
+    if (0) {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+
+    if (NaN) {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+
+    if ("") {
+        console.log("거짓")
+    } else {
+        console.log("참")
+    }
+</script>
+````
+
 > 조건문-if...else-아이디 비밀번호 확인
 ````
 <script>
@@ -215,7 +264,7 @@
 </script>
 ````
 
-> 조건문-if 이중중첩문을 활용한 조건문
+> if문의 중첩-아이디 비밀번호
 ````
  <script>
     var userId = "apple";
@@ -230,7 +279,7 @@
     } 
 </script>
 ````
-> 조건문-중첩 if문-아이디 비밀번호 확인
+> if문의 중첩-아이디 비밀번호
 ````
  <script>
     let useID = "silver";
@@ -249,6 +298,36 @@
     } else {
         //아이디가 다를 때
         document.write("아이디가 일치하지 않습니다.");
+    }
+</script>
+````
+
+> if문의 중첩-시험 점수
+````
+<script>
+    let score = 96;
+    let lecture = "sports";
+
+    if ("sports" == lecture) {
+        if (score >= 70) {
+            console.log("통과여부 : pass");
+            console.log("점수", score);
+        }
+        else {
+            console.log("통과여부 : fail");
+        }
+    } else {
+        if (score >= 90) {
+            console.log("점수 : A");
+        } else if (score >= 80) {
+            console.log("점수 : B");
+        } else if (score >= 70) {
+            console.log("점수 : C");
+        } else if (score >= 60) {
+            console.log("점수 : D");
+        } else {
+            console.log("점수 : F");
+        }
     }
 </script>
 ````
