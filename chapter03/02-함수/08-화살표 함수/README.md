@@ -15,7 +15,7 @@
         return a + b;
     };
 
-    add(1, 2); // 3
+    console.log( add(1, 2) ); // 3
 </script>
 ````
 
@@ -23,7 +23,7 @@
 ````
 <script>
     const add = function(a, b) {
-        return a + b;
+        return console.log(a + b);
     };
 
     add(1, 2); // 3
@@ -37,7 +37,7 @@
         return a + b;
     };
 
-    sum(1, 2); // 3
+    console.log( sum(1, 2) ); // 3
 </script>
 ````
 
@@ -61,7 +61,7 @@
 </script>
 ````
 
-> 본문이 여러 줄인 화살표 함수
+> 함수 내부가 단일 표현식(single expression)이 아닌 경우 즉, 함수 본문이 여러 줄인 화살표 함수는 {중괄호}와 return 키워드를 생략할 수 없다.
 ````
 <script>
     let sum = (a, b) => {  // 중괄호는 본문 여러 줄로 구성되어 있음을 알려준다.
@@ -69,23 +69,17 @@
         return result; // 중괄호를 사용했다면, return문으로 결과값을 반환해주어야 한다.
     };
 
-    alert( sum(1, 2) ); // 3
-</script>
-````
+    console.log( sum(1, 2) ); // 3
 
-> 함수 내부가 단일 표현식(single expression)이 아닌 경우 return 키워드를 생략할 수 없다.
-````
-<script>
     const add = (a, b) => {
         const sum = a + b;
         console.log("Sum:", sum);
 
-        // return 키워드를 생략할 수 없다.
-        return sum;
+        return sum; // return 키워드를 생략할 수 없다.
     };
 
     const result = add(3, 5);
-    console.log( "Result:", result ); // 결과: Sum: 8, Result: 8
+    console.log( "Result:", result ); // Sum: 8, Result: 8
 </script>
 ````
 

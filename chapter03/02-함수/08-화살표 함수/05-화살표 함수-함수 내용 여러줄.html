@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>화살표 함수-함수 내용 여러줄</h3>
+
+    <script>
+        let sum = (a, b) => {  // 중괄호는 본문 여러 줄로 구성되어 있음을 알려준다.
+            let result = a + b;
+            return result; // 중괄호를 사용했다면, return문으로 결과값을 반환해주어야 한다.
+        };
+
+        console.log( sum(1, 2) ); // 3
+
+        const add = (a, b) => {
+            const sum = a + b;
+            console.log("Sum:", sum);
+            
+            return sum; // return 키워드를 생략할 수 없다.
+        };
+
+        const result = add(3, 5);
+        console.log("Result:", result); // Sum: 8, Result: 8
+    </script>
+</body>
+
+</html>
