@@ -132,7 +132,7 @@
 </script>
 ````
 
-> 매개변수가 2개일 때 함수 내용이 한줄일 경우 중괄호와 return문 생략가능!
+> 매개변수가 여러개 일 때 함수 내용이 한줄일 경우 중괄호와 return문 생략가능!
 ````
 <script>
     // let add = (a,b) => {return a + b}
@@ -142,10 +142,25 @@
 </script>
 ````
 
-> 화살표 함수는 표기법이 간단하기 때문에 익명 함수를 다른 함수의 인수로 넘길 때 주로 사용된다.
+> 화살표 함수 + filter 메소드 
 ````
 <script>
+    //  화살표 함수는 표기법이 간단하기 때문에 익명 함수를 다른 함수의 인수로 넘길 때 주로 사용된다.
+    // filter는 배열에 사용하며, 주어진 함수를 만족하는 모든 요소를 모아 새 배열로 반환한다.
     [1, 2, 3, 4, 5].filter(x => x % 2 === 0);
+</script>
+````
+
+````
+<script>
+    const globalValue = 5;
+    const arr = [1, 5, 8, 10, 12, 15, 16, 20];
+
+    const newArr = arr.filter((data) => {
+        return data % globalValue == 0 ? true : false;
+    })
+
+    console.log(newArr)
 </script>
 ````
 
