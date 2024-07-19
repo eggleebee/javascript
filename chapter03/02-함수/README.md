@@ -378,6 +378,22 @@
 
 ````
 <script>
+    // 두 수를 더해서 반환하는 익명 함수
+    function(x, y) {
+        return x + y;
+    }
+    // 위의 익명 함수는 이름이 없어서 이름을 가지고 호출을 할 수 없다.
+
+    // 호출을 하려면 변수에 저장한 후에 변수의 이름을 통해 호출해야 한다.
+    const add = function(x, y) {
+        return x + y;
+    }
+    add(1, 2); // 3
+</script>
+````
+
+````
+<script>
     // 매개변수 + 리턴문
     // 함수 선언 후 변수 add에 할당
     let add = function (a, b) {
@@ -386,7 +402,7 @@
 
     // 익명 함수 실행 후 결과값을 변수 sum에 저장.
     let sum = add(100, 200)
-    document.write(sum , "<br>")
+    document.write(sum)
 </script>
 ````
 
