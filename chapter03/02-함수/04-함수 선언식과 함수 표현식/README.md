@@ -7,10 +7,41 @@
 
 
 ## 호이스팅(function hoisting)
-+ 호이스팅이란 선언한 변수 및 함수가 단순히 코드 최상단으로 올라오는 것을 의미한다.
++ 호이스팅이란  선언한 변수 및 함수가 선언 범위의 최상단으로 올라가 작동하는 것을 의미한다.
++ 이는 변수나 함수가 실제 코드에서 작성된 위치와 관계없이 선언 단계에서 메모리에 저장되기 때문에 발생한다.
++ 호이스팅은 크게 변수 호이스팅, 함수 호이스팅으로 나누어져 있다.
+
 > + var 호이스팅 방식 : 메모리에 변수 선언 + 'undefind'값으로 초기화 하여 접근가능
 > + let/const 호이스팅 방식 : 메모리에 변수 선언 단 TDZ에 있어 접근 불가
 
+### 변수 호이스팅(Hoisting)
+````
+<script>
+    number=3
+    console.log(number); // 3
+
+    var number = 5;
+    console.log(number); // 5
+
+    console.log(num) // undefind
+    var num = 3
+</script>
+````
+
+### let, const'로 선언한 mylet, youLet은 왜 'ReferenceError'가 나올까?
++ 호이스팅은 정말 단순히 최상단으로 올려주는 역할 뿐이고
++ 그 이후에 var과 다르게 let, const는 다른 과정이 추가된다.
++ 다시 말 해 let과 const는 호이스팅 되어 변수를 메모리에 올려놨지만 TDZ라는 지역에 있어 선언한 코드 줄을 지나야 접근 가능한 상태라고 보면 된다.
+
+````
+<script>
+    console.log(x); // ReferenceError
+    let x = 10;
+
+    console.log(y); // ReferenceError
+    const y = 10;
+</script>
+````
 
 ## 함수 선언식과 함수 표현식의 차이점
 
