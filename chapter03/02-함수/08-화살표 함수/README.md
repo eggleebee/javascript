@@ -120,7 +120,7 @@
     // const hi = () => { return "안녕하세요?" };
     const hi = () => "안녕하세요?";
 
-    console.log( hi() );
+    document.write( hi() );
 </script>
 ````
 
