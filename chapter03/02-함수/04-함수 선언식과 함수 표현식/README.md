@@ -43,6 +43,29 @@
 </script>
 ````
 
+### 함수 호이스팅(Hoisting)
++ 함수 표현식은 변수 호이스팅과 같은규칙을 따른다.
++ 즉, 함수 표현을 'var'로 하였는지 'let, const'로 하였는지에 따라서 '호이스팅 방식'이 달라진다.
+
+````
+<script>
+    // 함수 myFunc는 함수 선언식으로, 코드의 최상단으로 호이스팅된다.
+    // 따라서 선언 전에 호출할 수 있다.
+
+    console.log(myFunc()); // "Hello, world!"
+    function myFunc() {
+        return "Hello, world!";
+    }
+
+    // 반면에  myFuncExpr는 함수 표현식으로, var로 선언되었기 때문에 변수 호이스팅 규칙을 따른다.
+    // 이 경우 함수가 선언되기 전에 호출하면 TypeError가 발생한다. 
+    console.log(myFuncExpr()); // is not a function 에러 표시
+        var myFuncExpr = function() {
+        return "Hello, world!";
+    };
+</script>
+````
+
 ## 함수 선언식과 함수 표현식의 차이점
 
 |   |  정의  |  함수이름 | 호이스팅 | 함수 호출 |
