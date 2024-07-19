@@ -153,18 +153,24 @@
 ````
 <script>
     // bad
-    let first_Name = '홍길동';
-    let age = 20;
-    let hobby = ['수영','등산'];
-    let married = false;
-    let items = getItems();
+    var first_Name = '길동';
+    var age = 20;
+    var hobby = ['수영','등산'];
+    var married = false;
+    var items = getItems();
 
     // good
-    let first_Name = '홍길동',
+    var first_Name = '홍길동',
         age = 20,
         hobby = ['수영','등산'],
         married = false;
         items = getItems();
+
+
+
+    function getItems(){
+        // 실행문
+    }    
 </script>
 ````
 
