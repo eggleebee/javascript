@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>화살표 함수-매개변수가 하나</h3>
+
+    <script>
+        var 두배만들기 = x => { return x * 2 }
+
+        console.log(두배만들기(4)); // 8
+        console.log(두배만들기(8)); // 16
+
+        // let double = function(n) { return n * 2 }
+        let double = n => n * 2;
+
+        console.log(double(3)); // 6
+
+        let hi = user => document.write(user + "님, 안녕하세요?");
+
+        hi("홍길동");
+    </script>
+</body>
+
+</html>
