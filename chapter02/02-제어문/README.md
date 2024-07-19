@@ -53,6 +53,8 @@
 + if문과 else문은 2번 이상 사용할 수 없지만 else if문은 여러 번 사용할 수 있다.
 + 만약 코드 블록 내의 문이 하나라면 중괄호를 생략할 수 있다.
 
+
+> 조건문-if
 ````
 <script>
     // if
@@ -71,6 +73,7 @@
 </script>
 ````
 
+> 조건문-if...else
 ````
 <script>
     // if, else
@@ -88,6 +91,7 @@
 </script>
 ````
 
+> 조건문-if...else-아이디 비밀번호 확인
 ````
 <script>
     var id = prompt("아이디를 입력하세요");
@@ -106,6 +110,7 @@
 </script>
 ````
 
+> 조건문-if문 여러개
 ````
 <script>
     var age = 12;
@@ -130,6 +135,7 @@
 </script>
 ````
 
+> 조건문-if-else...if
 ````
 <script>
     // 한 묶음으로 하고 싶다면
@@ -147,6 +153,7 @@
 </script>
 ````
 
+> 조건문-if-else...if-등급 구분
 ````
 <script>
     const score = 96;
@@ -165,6 +172,7 @@
 </script>
 ````
 
+> 조건문-if-else...if-음료 선택
 ````
 <script>
     let drink = prompt("가격 조회를 원하는 음료수를 입력하세요.( 콜라, 사이다, 커피 中 택1)", "");
@@ -181,6 +189,7 @@
 </script>
 ````
 
+> 조건문-if-else...if-음식 선택
 ````
 <script>
     var food = prompt("먹고싶은 음식을 입력하세요.[떡볶이, 돈까스, 피자, 치킨 중에 입력]");
@@ -201,6 +210,7 @@
 </script>
 ````
 
+> 조건문-if문 중괄호 생략
 ````
 <script>
     // 코드 블록 내의 문이 하나라면 중괄호를 생략
@@ -230,6 +240,7 @@
 </script>
 ````
 
+> 조건문-if 이중중첩문을 활용한 조건문
 ````
  <script>
     var userId = "apple";
@@ -244,7 +255,7 @@
     } 
 </script>
 ````
-
+> 조건문-중첩 if문-아이디 비밀번호 확인
 ````
  <script>
     let useID = "silver";
@@ -300,6 +311,7 @@
 </script>
 ````
 
+> 조건문-swirch-요일 확인
 ````
  <script>
         const engDay = 'friday';
@@ -330,6 +342,7 @@
     </script>
 ````
 
+> 조건문-swirch-url 확인
 ````
  <script>
     const site = '구글';
@@ -360,6 +373,7 @@
 ## parseInt 란?
 > 자바스크립트에 내장되어 있는 함수로, 말 그대로 문자열을 파싱하여 문자열에 포함된 숫자를 찾아서 number로 형변환을 시켜준다.
 
+> 조건문-swirch-나이 확인
 ````
 <script>
     let age = prompt('당신의 나이는 몇살입니까? 예시) 17, 18, 19')
