@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>매개변수</h3>
+    <h4>객체 배열 전달</h4>
+    <script>
+        let fruit = ["딸기", "포도", "바나나"]
+        let person = { name: "홍길동", age: 20, job: "회사원" }
+
+        function printValue(arr, obj) {
+            console.log(arr[0] + "\n")
+            console.log(obj.name)
+        }
+
+        printValue(fruit, person)
+    </script>
+</body>
+
+</html>

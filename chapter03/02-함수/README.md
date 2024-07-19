@@ -12,20 +12,21 @@
 > + 함수 이름 뒤에 괄호를 붙여서 이 함수를 실행 이를 함수의 호출(function call)이라고 한다.
 > + 여기서 괄호 안에 넘겨준 2, 3을 인수(argument)라고 부른다.
 
+
+> 함수의 선언과 실행
 ````
 <script>
     // 함수 선언
-    function add(x, y) {
-        const result = x + y;
-        return result;
+    function 자판기(){
+	    document.write('콜라가 나왔습니다')
     }
 
     // 함수 실행
-    add(2, 3); // 5
+    자판기()
 </script>
 ````
 
-### 실행 순서
+## 함수의 실행 순서
 
 ````
 <script>
@@ -33,6 +34,7 @@
     function add(x, y) {
         return x + y; // 3 - 함수 실행
     }
+
     // 2 - 함수 호출
     const result = add(2, 3);
 
@@ -41,11 +43,14 @@
 </script>
 ````
 
-### 함수 이름 
+## 함수 이름 
 + 함수의 이름은 가능한 짧고 정확하게 함수의 기능을 설명해야 한다.
++ 단일 글자로 이름을 짓지 않고 이름을 통해 쓰임새를 알 수 있도록 한다.
 + 함수 이름은 function과 ()사이에 정의하고 이를 통해서 함수를 식별할 수 있다. 
 + 함수 이름은 변수 이름과 동일한 규칙으로 문자, 숫자, 밑줄, 달러 기호가 포함될 수 있다.
++ 자바스크립트 함수도 카멜케이스로 작성된다. 또한 함수 이름에 동사를 접두사로 지정하여 수행하는 작업을 알려주는 것이 좋다. 예시) get, push, apply, calculate, compute, post
 + 메모리상에서 함수가 저장된 위치를 찾는 식별자 역할을 한다. 함수 이름을 정의하지 않은 익명함수도 존재한다. 
+
 
 ````
 <script>
@@ -54,6 +59,43 @@
     calcSum(..)			// 무언가를 계산한다.
     createForm(..)		 // 무언가를 만든다.
     checkPermission(..)	// 무언가를 확인하고 불리언 등을 반환한다.
+
+    // 1. 단일 글자로 이름을 짓지 않고 이름을 통해 쓰임새를 알 수 있도록 한다.
+    // ----------------------------------------------------------
+    // bad
+    function q() {
+        실행코드
+    }
+
+    // good
+    function query() {
+        실행코드
+    }
+
+    // 2. 자바스크립트 함수도 카멜케이스로 작성된다. 또한 함수 이름에 동사를 접두사로 지정하여 수행하는 작업을 알려주는 것이 좋다.
+    // ----------------------------------------------------------
+    // bad
+    function name(firstName, lastName) {
+        return `${firstName} ${lastName}`;
+    }
+
+    // good
+    function getName(firstName, lastName) {**// here!!
+        return `${firstName} ${lastName}`;
+    }
+</script>
+````
+
+> 함수 이름 짓기
+
+````
+<script>
+    function showMessage() {
+        alert( '안녕하세요!' );
+    }
+
+    showMessage();
+    showMessage();
 </script>
 ````
 
@@ -74,6 +116,7 @@
 </script>
 ````
 
+> 함수 호출
 ````
 <script>
     // 함수 선언
@@ -90,49 +133,90 @@
 </script>
 ````
 
-### 매개변수
+### 매개변수(parameter)
 + parameter = 매개변수 = 변수
 + 함수 이름 옆에 () 소괄호 내부에 들어간다. 
 + 매개변수는 함수 선언에서 지정한 변수로, 함수의 기능을 수행하기 위해 필요한 값들을 받아들인다. 
 + 선언 시 매개변수 목록을 정의하면 함수를 호출할 때 인자값을 전달할 수 있다.
 + 매개변수가 없는 함수도 존재한다.
++ 매개변수 개수가 정해져 있지 않기 때문에 자바스크립트에서는 넘어오는 매개변수 값을 저장할 수 있는 저장장소 'arguments'라는 객체를 제공해준다.
+
+
+> 매개변수-자판기에서 음료수 꺼내기
+
+````
+<script>
+    function 자판기(음료수){
+        document.write(음료수 + "가 나왔다.<br>"); 
+    }
+
+    자판기("사이다");
+    자판기("콜라");
+</script>
+````
+
+> 매개변수-자판기에서 음료수 일정 수량 꺼내기
+
+````
+<script>
+    function 자판기(음료수, 수량){
+        document.write( 음료수 + ' ' + 수량 + "개 나왔습니다"); 
+    }
+
+    자판기("사이다", 3);
+</script>
+````
+
+> 매개변수-숫자더하기
 
 ````
 <script>
     function plusNumber(a,b) {  // 매개변수 a, b 
-        return a+b;
+        return console.log(a+b);
     }
+
+    plusNumber(40,50)
 </script>
 ````
 
-### 인수
+> 매개 변수 값으로 객체, 배열도 전달 가능
+
+````
+<script>
+    let fruit = ["딸기", "포도", "바나나"]
+    let person = { name: "홍길동", age: 20, job: "회사원" }
+
+    function printValue(arr, obj) {
+        console.log(arr[0] + "\n")
+        console.log(obj.name)
+    }
+
+    printValue(fruit, person)
+</script>
+````
+
+### 인수(argument)
 + argument = 전달되는 값
 + 인수는 함수를 호출할 때 전달되는 값으로, 매개변수와 대응된다. (매개변수와 인수는 개수와 순서가 동일)
-+ 매개변수보다 적은 인수가 들어오는 경우 전달되지 않은 부분은  undefined가 된다. 
++ 매개변수보다 적은 인수가 들어오는 경우 전달되지 않은 부분은 undefined가 된다. 
 + 매개변수보다 많은 인수가 들어오는 경우 초과된 인수는 내부적으로 arguments라는 객체로 저장되어 보관된다.
 
-````
-<script>
-    function plusNumber(a,b) {  // 매개변수 a, b 
-        return a+b;
-    }
-
-    plusNumber(1,2); // 전달되는 값(인수) 1, 2
-</script>
-````
+> 전달되는 값(인수)
 
 ````
 <script>
     const x = 2;
     const y = 3;
 
-    function add(a, b) {
+    function add(a, b) { // 매개변수 a, b 
         return a + b;
     }
 
-    const result = add(x, y);
+    const result = add(x, y); // 전달되는 값(인수) x = 2, y = 3
 </script>
 ````
+
+> arguments 개수확인
 
 ````
 <script>
@@ -145,6 +229,8 @@
 </script>
 ````
 
+> 매개변수보다 적은 인수가 들어오는 경우
+
 ````
 <script>
     function add(x, y) {
@@ -152,6 +238,17 @@
     }
 
     add(3) // NaN = 3 + undefined
+</script>
+````
+
+> 매개변수보다 많은 인수가 들어오는 경우
+
+````
+<script>
+    function add(x, y) {
+        return x + y;
+    }
+
     add(5, 10, 15) // 15 = 5 + 10  *3번째 인수 15는 arguments객체에 저장됨
 </script>
 ````
@@ -166,19 +263,6 @@
 
 ````
 <script>
-    function func() {
-        document.write("1. 함수가 실행되었습니다. <br>");
-        return; 
-
-        document.write("2. 함수가 실행되었습니다."); // 실행안됨
-    }
-
-    func();
-</script>
-````
-
-````
-<script>
     function add(x, y) {
         return x + y;
         console.log('이 부분은 실행되지 않습니다.');
@@ -186,6 +270,20 @@
     add(1, 2); // 3
 </script>
 ````
+
+> 매개변수+리턴 활용-자판기에서 음료수 꺼내기
+
+````
+<script>
+    function 자판기(종류){
+        return 종류
+    }
+    var data = 자판기("콜라") +'가 나왔습니다';
+    document.write(data) //콜라가 나왔습니다
+</script>
+````
+
+> if 구문 내부 return문
 
 ````
 <script>
@@ -235,14 +333,44 @@
 </script>
 ````
 
+> (기명)함수 선언식
 ````
 <script>
     // 함수 선언
-    function add (x, y) {
+    function 더하기() { console.log('더하기 함수 실행') }
+    function 빼기() { console.log('빼기 함수 실행') }
+
+    // 함수호출
+    더하기();
+    빼기();
+</script>
+````
+
+> 힘수 선언식-매개변수 + 리턴문
+````
+<script>
+    // 함수 선언
+    function add(x, y) {
         const result = x + y;
         console.log(result);
         return result;
     }
+
+    // 함수호출
+    console.log(add)
+</script>
+````
+
+````
+<script>
+    // 함수 선언
+    function add(x) {
+        let sum = x + 100;
+        return sum;
+    }
+
+    // 함수호출
+    console.log(sum)
 </script>
 ````
 
@@ -378,6 +506,19 @@
 
 ````
 <script>
+    function func() {
+        document.write("1. 함수가 실행되었습니다. <br>");
+        return; 
+
+        document.write("2. 함수가 실행되었습니다."); // 실행안됨
+    }
+
+    func();
+</script>
+````
+
+````
+<script>
     // 두 수를 더해서 반환하는 익명 함수
     function(x, y) {
         return x + y;
@@ -462,6 +603,7 @@
  </script>
 ````
 
+> 함수 선언식의 호이스팅
 ````
 <script>
     // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
@@ -473,6 +615,8 @@
     }
 </script>
 ````
+
+> 함수 표현식의 호이스팅
 ````
 <script>
     // 함수 표현식

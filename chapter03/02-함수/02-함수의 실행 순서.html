@@ -11,15 +11,18 @@
 <body>
     <h1>JavaScript</h1>
     <h2>함수</h2>
-    <h3>함수 선언식의 호이스팅</h3>
+    <h3>함수의 실행 순서</h3>
     <script>
-        // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
-        // 이는 함수 선언식이 호이스팅되기 때문.
-        console.log(greet()); // "Hello, World!"
-
-        function greet() {
-            return "Hello, World!";
+        // 1 - 함수 정의
+        function add(x, y) {
+            return x + y; // 3 - 함수 실행
         }
+        
+        // 2 - 함수 호출
+        const result = add(2, 3);
+    
+        // 4 - 나머지 코드 실행
+        console.log(result);
     </script>
 </body>
 

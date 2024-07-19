@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>if 구문 내부 return문</h3>
+    <script>
+        function doSomething () {
+            console.log('함수실행!');
+            var a = 3;
+            var b = 2;
+    
+            // if 구문 내부가 실행되면서 return 명령문이 실행됐기 때문에 return 명령문은 해당 함수를 종료시키게 된다. 
+            // 현재 return 명령문이 속해있는 함수는 doSomething이기 때문에 doSomething함수의 모든 코드 실행이 종료됨으로 
+            // 세번째 콘솔 메시지는 나타나지 않는다.
+            if (a > b) {
+                console.log('a가 b보다 크다!');
+                return;
+            }
+    
+            return 3;
+    
+            console.log('세번째 콘솔 메시지!'); //실행되지 않음
+        }
+    
+        doSomething(); // 결과 : 함수실행!, a가 b보다 크다!
+    </script>
+</body>
+
+</html>
