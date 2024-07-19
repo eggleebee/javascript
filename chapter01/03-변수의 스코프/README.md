@@ -177,7 +177,7 @@
 </script>
 ````
 
-### var, let, const 스코프 비교
+## var, let, const 스코프 비교
 |  | var | let | const |
 | --- | :---: | :---: | :---: |
 | 범위 | 함수 스코프(function scope) | 블록 스코프(block scope) | 블록 스코프(block scope) |
