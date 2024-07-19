@@ -61,8 +61,7 @@
     console.log(menuName, price)// 바깥쪽에서 참조불가
 </script>
 ````
-
-> 함수 스코프와 블록 스코프(function scope & block scope)
+### 함수 스코프와 블록 스코프(function scope & block scope)
 | 함수 스코프(function scope) | 블록 스코프(block scope) | 
 | --- | --- |
 | function{ } 안에있는 범위를 <br>함수 스코프 | function 을 제외한 <br>if나 for 등의 { 중괄호 } 안에 있는 범위를 블록 스코프 |
