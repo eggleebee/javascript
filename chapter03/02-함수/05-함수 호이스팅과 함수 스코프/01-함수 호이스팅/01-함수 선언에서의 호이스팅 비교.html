@@ -12,15 +12,17 @@
     <h1>JavaScript</h1>
     <h2>함수</h2>
     <h3>함수 호이스팅과 함수 스코프</h3>
-    <h4>함수 선언식의 호이스팅</h4>
+    <h4>함수 선언에서의 호이스팅 비교</h4>
 
     <script>
-        // greet 함수는 선언 전에 호출되었음에도 불구하고 정상적으로 작동한다.
-        // 이는 함수 선언식이 호이스팅되기 때문.
-        console.log(greet()); // "Hello, World!"
-    
-        function greet() {
-            return "Hello, World!";
+        foo1(); // 함수 선언문에서는 호이스팅 일어난다.
+        foo2(); // 함수 표현식이라서 호이스팅 안된다.
+
+        function foo1() {
+            console.log('Hello');
+        }
+        var foo2 = function () {
+            console.log('world');
         }
     </script>
 </body>

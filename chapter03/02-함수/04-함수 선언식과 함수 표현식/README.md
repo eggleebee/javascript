@@ -5,6 +5,11 @@
 + 함수 선언식(Function Declarations) 
 + 함수 표현식(Function Expressions)
 
+
+## 호이스팅(function hoisting)
++ 호이스팅이란 선언한 변수 및 함수가 단순히 코드 최상단으로 올라오는 것을 의미한다.
+
+
 ## 함수 선언식과 함수 표현식의 차이점
 
 |   |  정의  |  함수이름 | 호이스팅 | 함수 호출 |
