@@ -70,7 +70,10 @@
     };
 
     console.log( sum(1, 2) ); // 3
-
+</script>
+````
+````
+<script>
     const add = (a, b) => {
         const sum = a + b;
         console.log("Sum:", sum);
