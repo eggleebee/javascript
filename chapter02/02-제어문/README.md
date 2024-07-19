@@ -289,12 +289,12 @@
 + default문에는 break문을 생략하는 것이 일반적이다. default문은 switch문의 맨 마지막에 위치하므로 default문의 실행이 종료되면 switch문을 빠져나가기 때문이다.
 
 ### break문의 역할과 이유
-> break는 switch의 중괄호를 빠져나가는 명령어다.
-> witch조건문은 break문을 만나기 전까지 조건값들을 비교하여 case문 혹은 default문을 실행한다. 
++ break는 switch의 중괄호를 빠져나가는 명령어다.
++ witch조건문은 break문을 만나기 전까지 조건값들을 비교하여 case문 혹은 default문을 실행한다. 
 
 ### switch문 장점 : 간결성, 가독성
-> switch 조건문은 if else if 조건식으로 변환할 수 있다.
-> 두 식을 비교해보면 switch 조건문이 조금더 간결하고 가독성이 높다.
++ switch 조건문은 if else if 조건식으로 변환할 수 있다.
++ 두 식을 비교해보면 switch 조건문이 조금더 간결하고 가독성이 높다.
 
 ````
 <script>
