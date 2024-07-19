@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>함수 호이스팅과 함수 스코프</h3>
+    <h4>함수 스코프 내부 변수 출력</h4>
+
+    <script>
+        // 함수 스코프(Function Scope) 
+        function exampleFunction() {
+            let functionScopedVar = "함수 스코프 내 변수";
+            console.log(functionScopedVar); // "함수 스코프 내 변수" 출력
+        }
+
+        exampleFunction();
+        console.log(functionScopedVar); // ReferenceError(참조 불가) 발생
+    </script>
+</body>
+
+</html>

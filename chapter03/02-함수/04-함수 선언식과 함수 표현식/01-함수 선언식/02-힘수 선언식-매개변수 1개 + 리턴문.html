@@ -11,13 +11,18 @@
 <body>
     <h1>JavaScript</h1>
     <h2>함수</h2>
-    <h3>매개변수+리턴 활용-자판기에서 음료수 꺼내기</h3>
+    <h3>함수 선언식</h3>
+    <h4>힘수 선언식-매개변수 1개 + 리턴문</h4>
+
     <script>
-        function 자판기(종류){
-            return 종류
+        // 함수 선언
+        function add(x) {
+            let sum = x + 100;
+            return sum;
         }
-        var data = 자판기("콜라") +'가 나왔습니다';
-        document.write(data) //콜라가 나왔습니다
+
+        // 함수호출
+        console.log(sum)
     </script>
 </body>
 

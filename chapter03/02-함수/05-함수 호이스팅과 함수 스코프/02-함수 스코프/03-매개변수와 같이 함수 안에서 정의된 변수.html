@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>함수 호이스팅과 함수 스코프</h3>
+    <h4>매개변수와 같이 함수 안에서 정의된 변수</h4>
+
+    <script>
+        function add(x, y) { // 매개변수 `x`와 `y`가 정의됨
+            return x + y;
+        }
+
+        add(2, 3);
+
+        // 이렇게, 매개변수와 같이 함수 안에서 정의된 변수는 함수 바깥에서는 접근할 수 없기 때문에 함수 안에서만 사용할 수 있다. 
+        // 스코프(scope) : 변수는 코드의 일정 범위 안에서만 유효
+        console.log(x); // 에러! ReferenceError: x is not defined
+    </script>
+</body>
+
+</html>

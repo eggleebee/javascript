@@ -11,18 +11,18 @@
 <body>
     <h1>JavaScript</h1>
     <h2>함수</h2>
-    <h3>함수의 실행 순서</h3>
+    <h3>함수 표현식</h3>
+    <h4>익명함수 + return</h4>
+
     <script>
-        // 1 - 함수 정의
-        function add(x, y) {
-            return x + y; // 3 - 함수 실행
-        }
-        
-        // 2 - 함수 호출
-        const result = add(2, 3);
+        function func() {
+            document.write("1. 함수가 실행되었습니다. <br>");
+            return; 
     
-        // 4 - 나머지 코드 실행
-        console.log(result);
+            document.write("2. 함수가 실행되었습니다."); // 실행안됨
+        }
+    
+        func();
     </script>
 </body>
 

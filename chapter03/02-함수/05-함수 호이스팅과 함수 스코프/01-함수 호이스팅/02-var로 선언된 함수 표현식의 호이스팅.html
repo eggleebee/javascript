@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>함수 호이스팅과 함수 스코프</h3>
+    <h4>var로 선언된 함수 표현식의 호이스팅</h4>
+
+    <script>
+        // 함수 표현식은 호이스팅되지 않음
+        // 에러 발생! foo 함수는 아직 로드안됨
+        // TypeError: foo is not a function
+        console.log(foo());
+
+        var foo = function () {
+            return 5;
+        }
+    </script>
+</body>
+
+</html>

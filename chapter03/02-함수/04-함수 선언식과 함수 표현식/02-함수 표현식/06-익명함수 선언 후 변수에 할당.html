@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>함수</h2>
+    <h3>함수 표현식</h3>
+    <h4>익명함수 선언 후 변수에 할당</h4>
+
+    <script>
+        /*
+        function(x, y) {
+            return x + y;
+        }
+        */
+        
+        // 위의 익명 함수는 이름이 없어서 이름으로 호출을 할 수 없다.
+    
+        // 호출을 하려면 변수에 저장한 후에 변수의 이름을 통해 호출해야 한다.
+        const add = function(x, y) {
+            return x + y;
+        }
+        add(1, 2); // 3
+    </script>
+</body>
+
+</html>
