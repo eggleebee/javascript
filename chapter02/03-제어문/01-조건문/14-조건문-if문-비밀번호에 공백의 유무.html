@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>조건문</h2>
+    <h3>if문-비밀번호에 공백의 유무</h3>
+
+    <script>
+        const password = prompt('새로운 비밀번호를 입력해주세요!');
+
+        if (password.indexOf(' ') === -1) {  // -1이 나온다면 공백을 찾지 못한경우 (공백 X) 
+            console.log('비밀번호에 공백이 없습니다');
+        } else {
+            console.log('비밀번호에 공백이 있습니다. 수정이 필요합니다.');
+        }
+    </script>
+</body>
+
+</html>

@@ -279,7 +279,10 @@
     } 
 </script>
 ````
+
 > if문의 중첩-아이디 비밀번호
++ if ()문이 거짓일 때, 다른 조건문을 비교하려고 할 때 사용하는 것이 else if () 이다.
+
 ````
  <script>
     let useID = "silver";
@@ -302,13 +305,58 @@
 </script>
 ````
 
+> if문-비밀번호 개수가 6개 이상
+````
+<script>
+    const password = prompt('새로운 비밀번호를 입력해주세요!');
+
+    if (password.length >= 6) {
+        console.log("비밀번호 길이가 충분합니다.");
+    } else {
+        console.log("비밀번호를 6자 이상 입력해주세요.");
+    }
+</script>
+````
+
+> if문-비밀번호에 공백의 유무
+````
+<script>
+    const password = prompt('새로운 비밀번호를 입력해주세요!');
+
+    if (password.indexOf(' ') === -1) {  // -1이 나온다면 공백을 찾지 못한경우 (공백 X) 
+        console.log('비밀번호에 공백이 없습니다');
+    } else {
+        console.log('비밀번호에 공백이 있습니다. 수정이 필요합니다.');
+    }
+</script>
+````
+
+>  다중 조건문을 사용-비밀번호 개수가 6개 이상 + 비밀번호에 공백의 유무
+````
+<script>
+    const password = prompt('새로운 비밀번호를 입력해주세요!');
+
+    // 비밀번호 개수가 6개 이상인 경우
+    if (password.length >= 6) {
+        if (password.indexOf(' ') === -1) {  // -1이 나온다면 공백을 찾지 못한경우 (공백 X) 
+            console.log('올바른 비밀번호 입니다.');
+        } else {
+            console.log('길이는 충분하나, 비밀번호에 공백이 있습니다.');
+        }
+    } else {
+        console.log("비밀번호가 너무 짧습니다. 6개 이상으로 설정 바랍니다.");
+    }
+</script>
+````
+
 > if문의 중첩-시험 점수
+
 ````
 <script>
     let score = 96;
     let lecture = "sports";
 
-    if ("sports" == lecture) {
+    if (lecture == "sports") {
         if (score >= 70) {
             console.log("통과여부 : pass");
             console.log("점수", score);
