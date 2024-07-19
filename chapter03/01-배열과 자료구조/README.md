@@ -255,10 +255,6 @@
 ## filter와 화살표 함수
 + filter() 는 배열에 사용하며, 주어진 함수를 만족하는 모든 요소를 모아 새 배열로 반환한다.
 + 즉 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환한다.
-> + element - 배열의 현재 요소
-> + index(Optional) - 배열의 현재 요소의 인덱스
-> + array(Optional) - 호출한 배열
-
 
 ````
 <script>
@@ -267,6 +263,11 @@
     }); // [2, 4]
 </script>
 ````
+
+> + element - 배열의 현재 요소
+> + index(Optional) - 배열의 현재 요소의 인덱스
+> + array(Optional) - 호출한 배열
+
 
 ````
 <script>
